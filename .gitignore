@@ -1,0 +1,13 @@
+
+# compiled output
+dist
+tmp
+/out-tsc
+/nx
+/.nx
+
+# frontend
+**/*.env
+
+# dependencies
+node_modules

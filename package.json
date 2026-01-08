@@ -1,0 +1,12 @@
+{
+  "name": "keryan-cazaban",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "libs/*",
+    "apps/*"
+  ],
+  "devDependencies": {
+    "nx": "22.3.3"
+  }
+}
