@@ -1,5 +1,5 @@
 {
-  "name": "faded-navigation",
+  "name": "@navigation/faded-navigation",
   "version": "0.0.1",
   "type": "module",
   "main": "./dist/index.js",
@@ -13,5 +13,9 @@
       "import": "./dist/index.js",
       "default": "./dist/index.js"
     }
-  }
+  },
+  "tags": [
+    "scope:kcf",
+    "type:ui"
+  ]
 }
