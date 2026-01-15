@@ -1,0 +1,34 @@
+{
+  "HOMEPAGE": {
+    "HOME": {
+      "ABOUT": {
+        "DESCRIPTION": "Bonjour! Je suis Keryan Cazaban, un développeur full-stack passionné spécialisé dans la création d'expériences numériques exceptionnelles. Avec une expertise dans les technologies web modernes, j'aide les entreprises et les particuliers à transformer leurs idées en réalité.",
+        "DESCRIPTION_2": "Je me concentre sur la création d'applications performantes, maintenables et conviviales qui résolvent des problèmes réels. Que vous ayez besoin d'une application web complète, d'un site web responsive ou de solutions de développement personnalisées, je suis là pour vous aider."
+      },
+      "CONTACT": {
+        "LASTNAME": "Nom",
+        "FIRSTNAME": "Prénom",
+        "EMAIL": "Email",
+        "MESSAGE": "Message",
+        "SEND_MESSAGE": "Envoyer un Message"
+      },
+      "CONTACT_ME": "Me Contacter",
+      "JOB": "Développeur Full-Stack & Freelance",
+      "JOB_DESCRIPTION": "Création d'applications web modernes et évolutives avec des technologies de pointe. Donnons vie à vos idées.",
+      "NAVIGATION": {
+        "ABOUT": "À Propos de moi",
+        "HOME": "Accueil",
+        "SKILLS": "Compétences",
+        "PORTFOLIO": "Portfolio",
+        "CONTACT": "Contact"
+      },
+      "SKILLS": {
+        "FRONTEND": "Dévelopement Frontend",
+        "BACKEND": "Dévelopement Backend",
+        "DATABASES": "Bases de Données",
+        "SOFT_SKILLS": "Savoir-Être",
+        "TOOLS": "Outils & Plateformes"
+      }
+    }
+  }
+}
