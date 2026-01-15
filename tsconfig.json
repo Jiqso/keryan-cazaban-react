@@ -3,7 +3,9 @@
   "compileOnSave": false,
   "files": [],
   "compilerOptions": {
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "composite": true,
+    "lib": ["ES2015", "DOM"]
   },
   "references": [
     {
@@ -17,6 +19,15 @@
     },
     {
       "path": "./packages/navigation/faded-navigation"
+    },
+    {
+      "path": "./packages/translation"
+    },
+    {
+      "path": "./packages/intl-helper"
+    },
+    {
+      "path": "./packages/utils/language-provider"
     }
   ]
 }
