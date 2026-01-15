@@ -173,11 +173,6 @@ export function FeatureLayout() {
             {intl.formatMessage({ id: "HOMEPAGE.HOME.NAVIGATION.CONTACT" })}
           </h2>
           <div className={styles["contactContent"]}>
-            <p className={styles["contactIntro"]}>
-              Interested in working together? Have a project in mind? I'd love
-              to hear from you!
-            </p>
-
             <div className={styles["contactMethods"]}>
               <div className={styles["contactMethod"]}>
                 <h3>Email</h3>
@@ -208,6 +203,9 @@ export function FeatureLayout() {
                 </a>
               </div>
             </div>
+            <p className={styles["contactIntro"]}>
+              {intl.formatMessage({ id: "HOMEPAGE.HOME.CONTACT.INTRO" })}
+            </p>
 
             <div className={styles["contactForm"]}>
               <h3>
@@ -219,7 +217,7 @@ export function FeatureLayout() {
                 <div className={styles["formGroup"]}>
                   <label htmlFor="name">
                     {intl.formatMessage({
-                      id: "HOMEPAGE.HOME.CONTACT.LASTNAME",
+                      id: "HOMEPAGE.HOME.CONTACT.FULLNAME",
                     })}
                   </label>
                   <input type="text" id="name" name="name" required />

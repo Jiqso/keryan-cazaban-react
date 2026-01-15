@@ -84,38 +84,39 @@
 }
 
 /* Skills Section */
-.skillsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.skillCategory {
-  background: #f9f9f9;
-  padding: 2rem;
-  border-radius: 8px;
-  border-left: 4px solid #0070f3;
-  & h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    color: #1a1a1a;
+.skills {
+  &Grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
   }
-  & ul {
-    list-style: none;
-    padding: 0;
-  }
-  & li {
-    padding: 0.5rem 0;
-    color: #555;
-    position: relative;
-    padding-left: 1.5rem;
-    &:before {
-      content: "▹";
-      position: absolute;
-      left: 0;
-      color: #0070f3;
-      font-weight: bold;
+  &Category {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid #0070f3;
+    & h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: #1a1a1a;
+    }
+    & ul {
+      list-style: none;
+      padding: 0;
+    }
+    & li {
+      padding: 0.5rem 0;
+      color: #555;
+      position: relative;
+      padding-left: 1.5rem;
+      &:before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: #0070f3;
+        font-weight: bold;
+      }
     }
   }
 }
@@ -164,17 +165,15 @@
       }
     }
   }
-}
-
-/* Contact Form */
-.contactForm {
-  background: #f9f9f9;
-  padding: 2rem;
-  border-radius: 8px;
-  & h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-    color: #1a1a1a;
+  &Form {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    & h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      color: #1a1a1a;
+    }
   }
 }
 
