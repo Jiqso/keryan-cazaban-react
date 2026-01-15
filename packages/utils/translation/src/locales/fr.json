@@ -6,9 +6,9 @@
         "DESCRIPTION_2": "Je me concentre sur la création d'applications performantes, maintenables et conviviales qui résolvent des problèmes réels. Que vous ayez besoin d'une application web complète, d'un site web responsive ou de solutions de développement personnalisées, je suis là pour vous aider."
       },
       "CONTACT": {
-        "LASTNAME": "Nom",
-        "FIRSTNAME": "Prénom",
         "EMAIL": "Email",
+        "INTRO": "Vous souhaitez travailler ensemble ? Vous avez un projet en tête ? J'aimerais vous entendre !",
+        "FULLNAME": "Nom Complet",
         "MESSAGE": "Message",
         "SEND_MESSAGE": "Envoyer un Message"
       },
