@@ -1,0 +1,33 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "composite": true,
+    "lib": ["ES2015", "DOM"]
+  },
+  "references": [
+    {
+      "path": "./apps/kcf-e2e"
+    },
+    {
+      "path": "./apps/kcf"
+    },
+    {
+      "path": "./packages/layout/feature-layout"
+    },
+    {
+      "path": "./packages/navigation/faded-navigation"
+    },
+    {
+      "path": "./packages/translation"
+    },
+    {
+      "path": "./packages/intl-helper"
+    },
+    {
+      "path": "./packages/utils/language-provider"
+    }
+  ]
+}
