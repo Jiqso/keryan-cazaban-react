@@ -12,7 +12,6 @@
             "enforceBuildableLibDependency": true,
             "allow": [],
             "depConstraints": [
-              // projects without any tags will be able to depend on any other project
               {
                 "sourceTag": "scope:shared",
                 "onlyDependOnLibsWithTags": ["scope:shared"]
