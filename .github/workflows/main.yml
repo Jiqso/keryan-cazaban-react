@@ -6,9 +6,9 @@ run-name: ${{ github.actor }} is pushing into the main branch 🚀
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: ["main"]
+    branches: ['main']
   pull_request:
-    branches: ["main"]
+    branches: ['main']
 
   # Allows you to run this workflow manually from the Actions tab
 #   workflow_dispatch:
@@ -34,7 +34,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 24.12.0
-          cache: "npm"
+          cache: 'npm'
 
       - name: Cache Node Modules
         id: node-cache
@@ -60,7 +60,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 24.12.0
-          cache: "npm"
+          cache: 'npm'
       - uses: actions/cache@v4
         with:
           path: node_modules
@@ -113,7 +113,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
+          cache: 'npm'
       - name: Cache dependencies and build outputs
         uses: actions/cache@v4
         with:

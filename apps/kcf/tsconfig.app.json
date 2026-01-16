@@ -32,13 +32,7 @@
     "eslint.config.cjs",
     "eslint.config.mjs"
   ],
-  "include": [
-    "src/**/*.js",
-    "src/**/*.jsx",
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.json"
-  ],
+  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx", "src/**/*.json"],
   "references": [
     {
       "path": "../../packages/utils/language-provider/tsconfig.lib.json"

@@ -21,14 +21,10 @@
     "baseUrl": "./",
     "paths": {
       "@layout/feature-layout": ["packages/layout/feature-layout/src/index.ts"],
-      "@navigation/faded-navigation": [
-        "packages/navigation/faded-navigation/src/index.ts"
-      ],
+      "@navigation/faded-navigation": ["packages/navigation/faded-navigation/src/index.ts"],
       "@utils/intl-helper": ["packages/utils/intl-helper/src/index.ts"],
       "@utils/translation": ["packages/utils/translation/src/index.ts"],
-      "@utils/language-provider": [
-        "packages/utils/language-provider/src/index.ts"
-      ]
+      "@utils/language-provider": ["packages/utils/language-provider/src/index.ts"]
     }
   }
 }
