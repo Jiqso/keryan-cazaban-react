@@ -5,6 +5,10 @@
   "nx": {
     "implicitDependencies": [
       "kcf"
+    ],
+    "tags": [
+      "scope:kcf",
+      "type:app-e2e"
     ]
   }
 }
