@@ -14,8 +14,10 @@
       "default": "./dist/index.js"
     }
   },
-  "tags": [
-    "scope:kcf",
-    "type:feature"
-  ]
+  "nx": {
+    "tags": [
+      "scope:kcf",
+      "type:feature"
+    ]
+  }
 }
