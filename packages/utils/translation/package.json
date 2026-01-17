@@ -11,8 +11,10 @@
     },
     "./package.json": "./package.json"
   },
-  "tags": [
-    "scope:kcf",
-    "type:util"
-  ]
+  "nx": {
+    "tags": [
+      "scope:kcf",
+      "type:util"
+    ]
+  }
 }

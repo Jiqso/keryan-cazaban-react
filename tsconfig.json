@@ -21,13 +21,13 @@
       "path": "./packages/navigation/faded-navigation"
     },
     {
-      "path": "./packages/translation"
-    },
-    {
-      "path": "./packages/intl-helper"
-    },
-    {
       "path": "./packages/utils/language-provider"
+    },
+    {
+      "path": "./packages/utils/intl-helper"
+    },
+    {
+      "path": "./packages/utils/translation"
     }
   ]
 }

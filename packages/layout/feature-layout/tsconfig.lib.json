@@ -42,6 +42,14 @@
   ],
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
   "references": [
-    { "path": "../../navigation/faded-navigation/tsconfig.lib.json" }
+    {
+      "path": "../../navigation/faded-navigation/tsconfig.lib.json"
+    },
+    {
+      "path": "../../utils/translation/tsconfig.lib.json"
+    },
+    {
+      "path": "../../utils/intl-helper/tsconfig.lib.json"
+    }
   ]
 }

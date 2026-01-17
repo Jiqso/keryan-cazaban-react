@@ -2,8 +2,10 @@
   "name": "kcf",
   "version": "0.0.1",
   "private": true,
-  "tags": [
-    "scope:kcf",
-    "type:app"
-  ]
+  "nx": {
+    "tags": [
+      "scope:kcf",
+      "type:app"
+    ]
+  }
 }

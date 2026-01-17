@@ -28,7 +28,7 @@
     font-weight: 700;
     margin-bottom: 1rem;
     color: #1a1a1a;
-    font-family: "Quicksand", sans-serif;
+    font-family: 'Quicksand', sans-serif;
   }
   &Subtitle {
     font-size: 1.5rem;
@@ -53,8 +53,10 @@
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
-  transition: background-color 0.3s, transform 0.2s;
-  font-family: "Quicksand", sans-serif;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+  font-family: 'Quicksand', sans-serif;
   &:hover {
     background-color: #0051cc;
     transform: translateY(-2px);
@@ -69,7 +71,7 @@
   border-bottom: 3px solid #0070f3;
   padding-bottom: 0.5rem;
   display: inline-block;
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 /* About Section */
@@ -111,7 +113,7 @@
       position: relative;
       padding-left: 1.5rem;
       &:before {
-        content: "▹";
+        content: '▹';
         position: absolute;
         left: 0;
         color: #0070f3;

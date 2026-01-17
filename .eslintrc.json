@@ -12,7 +12,6 @@
             "enforceBuildableLibDependency": true,
             "allow": [],
             "depConstraints": [
-              // projects without any tags will be able to depend on any other project
               {
                 "sourceTag": "scope:shared",
                 "onlyDependOnLibsWithTags": ["scope:shared"]
@@ -47,11 +46,7 @@
               },
               {
                 "sourceTag": "type:ui",
-                "onlyDependOnLibsWithTags": [
-                  "type:ui",
-                  "type:util",
-                  "type:data-model"
-                ]
+                "onlyDependOnLibsWithTags": ["type:ui", "type:util", "type:data-model"]
               },
               {
                 "sourceTag": "type:util",
@@ -59,11 +54,7 @@
               },
               {
                 "sourceTag": "type:data-access",
-                "onlyDependOnLibsWithTags": [
-                  "type:data-access",
-                  "type:data-model",
-                  "type:util"
-                ]
+                "onlyDependOnLibsWithTags": ["type:data-access", "type:data-model", "type:util"]
               }
             ]
           }

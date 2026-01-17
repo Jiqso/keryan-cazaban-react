@@ -1,18 +1,18 @@
 /// <reference types='vitest' />
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import { nxViteTsPaths } from "@nx/vite/plugins/nx-tsconfig-paths.plugin";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig(() => ({
   root: import.meta.dirname,
-  cacheDir: "../node_modules/.vite/kcf",
+  cacheDir: '../node_modules/.vite/kcf',
   server: {
     port: 4200,
-    host: "localhost",
+    host: 'localhost',
   },
   preview: {
     port: 4200,
-    host: "localhost",
+    host: 'localhost',
   },
   plugins: [react(), nxViteTsPaths()],
   // Uncomment this if you are using workers.
@@ -20,7 +20,7 @@ export default defineConfig(() => ({
   //  plugins: [],
   // },
   build: {
-    outDir: "./dist",
+    outDir: './dist',
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
@@ -28,15 +28,15 @@ export default defineConfig(() => ({
     },
   },
   test: {
-    name: "kcf",
+    name: 'kcf',
     watch: false,
     globals: true,
-    environment: "jsdom",
-    include: ["{src,tests}/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
-    reporters: ["default"],
+    environment: 'jsdom',
+    include: ['{src,tests}/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+    reporters: ['default'],
     coverage: {
-      reportsDirectory: "./test-output/vitest/coverage",
-      provider: "v8" as const,
+      reportsDirectory: './test-output/vitest/coverage',
+      provider: 'v8' as const,
     },
   },
 }));
