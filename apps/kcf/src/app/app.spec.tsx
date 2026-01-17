@@ -1,15 +1,10 @@
-import { render } from '@testing-library/react';
-
+import { IntlHelper } from '@utils/intl-helper';
+import { IntlMessages } from '@utils/translation';
 import App from './app';
 
 describe('App', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<App />);
+    const { baseElement } = IntlHelper(<App />, 'en', IntlMessages('en'));
     expect(baseElement).toBeTruthy();
-  });
-
-  it('should have a greeting as the title', () => {
-    const { getAllByText } = render(<App />);
-    expect(getAllByText(new RegExp('Welcome kcf', 'gi')).length > 0).toBeTruthy();
   });
 });

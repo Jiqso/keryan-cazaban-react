@@ -39,6 +39,12 @@
     },
     {
       "path": "../../packages/layout/feature-layout/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/utils/translation/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/utils/intl-helper/tsconfig.lib.json"
     }
   ]
 }
