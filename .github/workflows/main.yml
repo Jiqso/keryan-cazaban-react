@@ -133,25 +133,25 @@ jobs:
           retention-days: 5
 
   # Semantic-Release job
-  # semantic-release:
-  #   needs: build
-  #   # The type of runner that the job will run on
-  #   runs-on: ubuntu-latest
+  semantic-release:
+    needs: build
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
 
-  #   # Steps represent a sequence of tasks that will be executed as part of the job
-  #   steps:
-  #     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-  #     - uses: actions/checkout@v3
-  #     - name: Setup Node
-  #       uses: actions/setup-node@v3
-  #       with:
-  #         node-version: 18.20.0
-  #         cache: 'npm'
-  #     - uses: actions/cache@v3
-  #       with:
-  #         path: node_modules
-  #         key: node-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.20.0
+          cache: 'npm'
+      - uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
 
-  # Trigger semantic release
-  # - name: Running Semantic-Release
-  #   run: npx semantic-release@22.0.12
+      # Trigger semantic release
+      - name: Running Semantic-Release
+        run: npx semantic-release@22.0.12
