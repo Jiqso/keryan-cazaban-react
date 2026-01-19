@@ -35,8 +35,6 @@ export function FeatureLayout() {
     },
   ];
 
-  console.log('isScrolled', isScrolled);
-
   return (
     <div className={styles['container']}>
       <FadedNavigation
@@ -45,33 +43,41 @@ export function FeatureLayout() {
         onScrolledChange={setIsScrolled}
       />
 
-      <main className={`${styles['content']} ${isScrolled ? styles['contentShifted'] : ''}`}>
+      <main className={`${styles['content']} ${isScrolled ? styles['content-shifted'] : ''}`}>
         <section id="home" className={styles['section']}>
           <div className={styles['hero']}>
-            <h1 className={styles['heroTitle']}>Keryan Cazaban</h1>
-            <p className={styles['heroSubtitle']}>
-              {intl.formatMessage({
-                id: 'HOMEPAGE.HOME.JOB',
-              })}
-            </p>
-            <p className={styles['heroDescription']}>
-              {intl.formatMessage({
-                id: 'HOMEPAGE.HOME.JOB_DESCRIPTION',
-              })}
-            </p>
-            <a href="#contact" className={styles['ctaButton']}>
-              {intl.formatMessage({
-                id: 'HOMEPAGE.HOME.CONTACT_ME',
-              })}
-            </a>
+            <div className={styles['hero-background']}>
+              <div className={styles['radiant-gradient']} />
+              <div className={styles['shape'] + ' ' + styles['shape1']}></div>
+              <div className={styles['shape'] + ' ' + styles['shape2']}></div>
+              <div className={styles['shape'] + ' ' + styles['shape3']}></div>
+            </div>
+            <div className={styles['hero-content']}>
+              <h1 className={styles['hero-title']}>Keryan Cazaban</h1>
+              <p className={styles['hero-subtitle']}>
+                {intl.formatMessage({
+                  id: 'HOMEPAGE.HOME.JOB',
+                })}
+              </p>
+              <p className={styles['hero-description']}>
+                {intl.formatMessage({
+                  id: 'HOMEPAGE.HOME.JOB_DESCRIPTION',
+                })}
+              </p>
+              <a href="#contact" className={styles['cta-button']}>
+                {intl.formatMessage({
+                  id: 'HOMEPAGE.HOME.CONTACT_ME',
+                })}
+              </a>
+            </div>
           </div>
         </section>
 
-        <section id="about" className={styles['section']}>
-          <h2 className={styles['sectionTitle']}>
+        <section id="about" className={styles['section-shifted']}>
+          <h2 className={styles['section-title']}>
             {intl.formatMessage({ id: 'HOMEPAGE.HOME.NAVIGATION.ABOUT' })}
           </h2>
-          <div className={styles['aboutContent']}>
+          <div className={styles['about-content']}>
             <p>
               {intl.formatMessage({
                 id: 'HOMEPAGE.HOME.ABOUT.DESCRIPTION',
@@ -85,96 +91,135 @@ export function FeatureLayout() {
           </div>
         </section>
 
-        <section id="skills" className={styles['section']}>
-          <h2 className={styles['sectionTitle']}>
+        <section id="skills" className={styles['section-shifted']}>
+          <h2 className={styles['section-title']}>
             {intl.formatMessage({ id: 'HOMEPAGE.HOME.NAVIGATION.SKILLS' })}
           </h2>
-          <div className={styles['skillsGrid']}>
-            <div className={styles['skillCategory']}>
+          <div className={styles['skills-grid']}>
+            <div className={styles['skills-category']}>
               <h3>
                 {intl.formatMessage({
-                  id: 'HOMEPAGE.HOME.SKILLS.FRONTEND',
+                  id: 'HOMEPAGE.HOME.SKILLS.FRONTEND_TITLE',
                 })}
               </h3>
               <ul>
-                <li>React & TypeScript</li>
-                <li>Next.js</li>
+                <li>React, PHP, Angular</li>
                 <li>HTML5, CSS3, JavaScript</li>
-                <li>Responsive Design</li>
-                <li>UI/UX Implementation</li>
+                <li>Material UI</li>
+                <li>
+                  {intl.formatMessage({
+                    id: 'HOMEPAGE.HOME.SKILLS.FRONTEND.RESPONSIVE_DESIGN',
+                  })}
+                </li>
+                <li>
+                  {intl.formatMessage({
+                    id: 'HOMEPAGE.HOME.SKILLS.FRONTEND.UI_UX_IMPLEMENTATION',
+                  })}
+                </li>
               </ul>
             </div>
-
-            <div className={styles['skillCategory']}>
+            <div className={styles['skills-category']}>
               <h3>
                 {intl.formatMessage({
-                  id: 'HOMEPAGE.HOME.SKILLS.BACKEND',
+                  id: 'HOMEPAGE.HOME.SKILLS.BACKEND_TITLE',
                 })}
               </h3>
               <ul>
                 <li>Node.js</li>
                 <li>REST APIs</li>
-                <li>Database Design</li>
-                <li>Authentication & Security</li>
-                <li>Server-side Rendering</li>
+                <li>
+                  {intl.formatMessage({
+                    id: 'HOMEPAGE.HOME.SKILLS.BACKEND.DATABASE_DESIGN',
+                  })}
+                </li>
+                <li>
+                  {intl.formatMessage({
+                    id: 'HOMEPAGE.HOME.SKILLS.BACKEND.AUTH_SECURITY',
+                  })}
+                </li>
               </ul>
             </div>
 
-            <div className={styles['skillCategory']}>
+            <div className={styles['skills-category']}>
               <h3>
                 {intl.formatMessage({
-                  id: 'HOMEPAGE.HOME.SKILLS.TOOLS',
+                  id: 'HOMEPAGE.HOME.SKILLS.TOOLS_TITLE',
                 })}
               </h3>
               <ul>
-                <li>Git & Version Control</li>
+                <li>Typescript</li>
+                <li>Github</li>
                 <li>Nx Monorepo</li>
-                <li>Vite & Build Tools</li>
-                <li>Testing (Vitest, Jest)</li>
-                <li>CI/CD Pipelines</li>
+                <li>Vite, Express</li>
+                <li>CI/CD Pipelines, Testing (Vitest, Jest)</li>
+                <li>Prettier, ESLint, i18n, Theming</li>
               </ul>
             </div>
 
-            <div className={styles['skillCategory']}>
+            <div className={styles['skills-category']}>
               <h3>
                 {intl.formatMessage({
-                  id: 'HOMEPAGE.HOME.SKILLS.SOFT_SKILLS',
+                  id: 'HOMEPAGE.HOME.SKILLS.SOFT_SKILLS_TITLE',
                 })}
               </h3>
               <ul>
-                <li>Problem Solving</li>
-                <li>Client Communication</li>
-                <li>Project Management</li>
-                <li>Agile Methodology</li>
-                <li>Code Review & Mentoring</li>
+                <li>
+                  {intl.formatMessage({
+                    id: 'HOMEPAGE.HOME.SKILLS.SOFT_SKILLS.PROBLEM_SOLVING',
+                  })}
+                </li>
+                <li>
+                  {intl.formatMessage({
+                    id: 'HOMEPAGE.HOME.SKILLS.SOFT_SKILLS.CLIENT_COMMUNICATION',
+                  })}
+                </li>
+                <li>
+                  {intl.formatMessage({
+                    id: 'HOMEPAGE.HOME.SKILLS.SOFT_SKILLS.PROJECT_MANAGEMENT',
+                  })}
+                </li>
+                <li>
+                  {intl.formatMessage({
+                    id: 'HOMEPAGE.HOME.SKILLS.SOFT_SKILLS.CODE_REVIEW_MENTORING',
+                  })}
+                </li>
+                <li>
+                  {intl.formatMessage({
+                    id: 'HOMEPAGE.HOME.SKILLS.SOFT_SKILLS.TEAMWORK',
+                  })}
+                </li>
+                <li>
+                  {intl.formatMessage({
+                    id: 'HOMEPAGE.HOME.SKILLS.SOFT_SKILLS.ADAPTABILITY',
+                  })}
+                </li>
               </ul>
             </div>
           </div>
         </section>
 
-        <section id="portfolio" className={styles['section']}>
-          <h2 className={styles['sectionTitle']}>
+        <section id="portfolio" className={styles['section-shifted']}>
+          <h2 className={styles['section-title']}>
             {intl.formatMessage({ id: 'HOMEPAGE.HOME.NAVIGATION.PORTFOLIO' })}
           </h2>
-          <p className={styles['portfolioPlaceholder']}>
-            Portfolio examples coming soon. This section will showcase real-world applications and
-            projects demonstrating my capabilities in web development.
+          <p className={styles['portfolio-placeholder']}>
+            {intl.formatMessage({ id: 'HOMEPAGE.HOME.PORTFOLIO.PLACEHOLDER' })}
           </p>
           {/* Future portfolio items will be added here */}
         </section>
 
-        <section id="contact" className={styles['section']}>
-          <h2 className={styles['sectionTitle']}>
+        <section id="contact" className={styles['section-shifted']}>
+          <h2 className={styles['section-title']}>
             {intl.formatMessage({ id: 'HOMEPAGE.HOME.NAVIGATION.CONTACT' })}
           </h2>
-          <div className={styles['contactContent']}>
-            <div className={styles['contactMethods']}>
-              <div className={styles['contactMethod']}>
+          <div className={styles['contact-content']}>
+            <div className={styles['contact-methods']}>
+              <div className={styles['contact-method']}>
                 <h3>Email</h3>
                 <a href="mailto:keryan.cazaban@gmail.com">keryan.cazaban@gmail.com</a>
               </div>
 
-              <div className={styles['contactMethod']}>
+              <div className={styles['contact-method']}>
                 <h3>LinkedIn</h3>
                 <a
                   href="https://www.linkedin.com/in/keryan-cazaban-ba69b2153"
@@ -185,25 +230,25 @@ export function FeatureLayout() {
                 </a>
               </div>
 
-              <div className={styles['contactMethod']}>
+              <div className={styles['contact-method']}>
                 <h3>GitHub</h3>
                 <a href="https://github.com/Jiqso" target="_blank" rel="noopener noreferrer">
                   github.com/Jiqso
                 </a>
               </div>
             </div>
-            <p className={styles['contactIntro']}>
+            <p className={styles['contact-intro']}>
               {intl.formatMessage({ id: 'HOMEPAGE.HOME.CONTACT.INTRO' })}
             </p>
 
-            <div className={styles['contactForm']}>
+            <div className={styles['contact-form']}>
               <h3>
                 {intl.formatMessage({
                   id: 'HOMEPAGE.HOME.CONTACT.SEND_MESSAGE',
                 })}
               </h3>
               <form>
-                <div className={styles['formGroup']}>
+                <div className={styles['form-group']}>
                   <label htmlFor="name">
                     {intl.formatMessage({
                       id: 'HOMEPAGE.HOME.CONTACT.FULLNAME',
@@ -211,7 +256,7 @@ export function FeatureLayout() {
                   </label>
                   <input type="text" id="name" name="name" required />
                 </div>
-                <div className={styles['formGroup']}>
+                <div className={styles['form-group']}>
                   <label htmlFor="email">
                     {intl.formatMessage({
                       id: 'HOMEPAGE.HOME.CONTACT.EMAIL',
@@ -220,7 +265,7 @@ export function FeatureLayout() {
                   <input type="email" id="email" name="email" required />
                 </div>
 
-                <div className={styles['formGroup']}>
+                <div className={styles['form-group']}>
                   <label htmlFor="message">
                     {intl.formatMessage({
                       id: 'HOMEPAGE.HOME.CONTACT.MESSAGE',
@@ -229,7 +274,7 @@ export function FeatureLayout() {
                   <textarea id="message" name="message" rows={5} required></textarea>
                 </div>
 
-                <button type="submit" className={styles['submitButton']}>
+                <button type="submit" className={styles['submit-button']}>
                   {intl.formatMessage({
                     id: 'HOMEPAGE.HOME.CONTACT.SEND_MESSAGE',
                   })}
