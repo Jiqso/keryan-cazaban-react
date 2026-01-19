@@ -1,5 +1,5 @@
 {
-  "name": "packages/layout/feature-layout",
+  "name": "@layout/feature-layout",
   "version": "0.0.1",
   "type": "module",
   "main": "./dist/index.js",
