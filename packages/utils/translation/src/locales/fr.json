@@ -22,12 +22,30 @@
         "PORTFOLIO": "Portfolio",
         "CONTACT": "Contact"
       },
+      "PORTFOLIO": {
+        "PLACEHOLDER": "Exemples de portfolio à venir bientôt. Cette section présentera des applications et des projets réels démontrant mes compétences en développement web."
+      },
       "SKILLS": {
-        "FRONTEND": "Dévelopement Frontend",
-        "BACKEND": "Dévelopement Backend",
-        "DATABASES": "Bases de Données",
-        "SOFT_SKILLS": "Savoir-Être",
-        "TOOLS": "Outils & Plateformes"
+        "FRONTEND_TITLE": "Dévelopement Frontend",
+        "FRONTEND": {
+          "UI_UX_IMPLEMENTATION": "Implémentation UI/UX",
+          "RESPONSIVE_DESIGN": "Design Responsive"
+        },
+        "BACKEND_TITLE": "Dévelopement Backend",
+        "BACKEND": {
+          "AUTH_SECURITY": "Authentification & Sécurité",
+          "DATABASE_DESIGN": "Conception de Bases de Données"
+        },
+        "SOFT_SKILLS_TITLE": "Savoir-Être",
+        "SOFT_SKILLS": {
+          "ADAPTABILITY": "Adaptabilité",
+          "CLIENT_COMMUNICATION": "Communication avec les Clients",
+          "CODE_REVIEW_MENTORING": "Revue de Code & Mentorat",
+          "PROJECT_MANAGEMENT": "Gestion de Projet",
+          "PROBLEM_SOLVING": "Résolution de Problèmes",
+          "TEAMWORK": "Travail d'Équipe"
+        },
+        "TOOLS_TITLE": "Outils & Plateformes"
       }
     }
   }
