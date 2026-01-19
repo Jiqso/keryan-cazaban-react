@@ -72,13 +72,13 @@ export function FadedNavigation({
   return (
     <>
       {/* Top Horizontal Navigation */}
-      <nav className={`${styles.topNav} ${isScrolled ? styles.hidden : ''}`}>
-        <div className={styles.topNavContent}>
+      <nav className={`${styles['top-nav']} ${isScrolled ? styles.hidden : ''}`}>
+        <div className={styles['top-nav-content']}>
           {items.map(item => (
             <a
               key={item.id}
               href={item.href}
-              className={`${styles.topNavLink} ${activeSection === item.id ? styles.active : ''}`}
+              className={`${styles['top-nav-link']} ${activeSection === item.id ? styles.active : ''}`}
               onClick={e => handleNavigationClick(e, item.href)}
             >
               {item.label}
@@ -88,13 +88,13 @@ export function FadedNavigation({
       </nav>
 
       {/* Side Navigation Tree */}
-      <aside className={`${styles.sideNav} ${isScrolled ? styles.visible : ''}`}>
-        <nav className={styles.sideNavContent}>
+      <aside className={`${styles['side-nav']} ${isScrolled ? styles.visible : ''}`}>
+        <nav className={styles['side-nav-content']}>
           {items.map(item => (
-            <div key={item.id} className={styles.navItem}>
+            <div key={item.id} className={styles['nav-item']}>
               <a
                 href={item.href}
-                className={`${styles.sideNavLink} ${
+                className={`${styles['side-nav-link']} ${
                   activeSection === item.id ? styles.active : ''
                 }`}
                 onClick={e => handleNavigationClick(e, item.href)}
@@ -102,12 +102,12 @@ export function FadedNavigation({
                 {item.label}
               </a>
               {item.children && item.children.length > 0 && (
-                <div className={styles.navChildren}>
+                <div className={styles['nav-children']}>
                   {item.children.map(child => (
                     <a
                       key={child.id}
                       href={child.href}
-                      className={`${styles.sideNavChildLink} ${
+                      className={`${styles['side-nav-child-link']} ${
                         activeSection === child.id ? styles.active : ''
                       }`}
                       onClick={e => handleNavigationClick(e, child.href)}
