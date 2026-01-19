@@ -1,5 +1,5 @@
 {
-  "name": "@navigation/faded-navigation",
+  "name": "packages/navigation/faded-navigation",
   "version": "0.0.1",
   "type": "module",
   "main": "./dist/index.js",
