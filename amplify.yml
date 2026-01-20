@@ -8,6 +8,7 @@ frontend:
         - npm ci
     build:
       commands:
+        - export NX_CLOUD_NO_TIMEOUTS=true
         - npx nx build kcf --configuration=production --skip-nx-cache
   artifacts:
     baseDirectory:
