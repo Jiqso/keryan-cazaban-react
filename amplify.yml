@@ -8,13 +8,7 @@ frontend:
         - npm ci
     build:
       commands:
-        - export NX_CLOUD_NO_TIMEOUTS=true
-        - pwd
         - npx nx build kcf --configuration=production --skip-nx-cache
-        - pwd
-        - ls -la
-        - find . -name "index.html" -type f
-        - find . -type d -name "dist"
   artifacts:
     baseDirectory: dist/apps/kcf
     files:
