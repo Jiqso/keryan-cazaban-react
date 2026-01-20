@@ -3,10 +3,16 @@ frontend:
   phases:
     preBuild:
       commands:
+        - nvm use 20
+        - node --version
         - npm ci
     build:
       commands:
-        - npx nx build kcf --configuration=production
+        - export NX_CLOUD_NO_TIMEOUTS=true
+        - npx nx build kcf --configuration=production --skip-nx-cache
+        - ls -la
+        - ls -la dist/
+        - ls -la dist/apps/
   artifacts:
     baseDirectory: dist/apps/kcf
     files:
