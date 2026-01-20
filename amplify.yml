@@ -5,7 +5,7 @@ frontend:
       commands:
         - npx nx build kcf --configuration=production --skip-nx-cache
   artifacts:
-    baseDirectory: dist/apps/kcf
+    baseDirectory: apps/kcf/dist
     files:
       - '**/*'
   cache:
