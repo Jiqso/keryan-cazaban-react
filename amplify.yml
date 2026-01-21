@@ -1,12 +1,11 @@
 version: 1
 applications:
-  - appRoot: apps/kcf/src/app
+  - appRoot: apps/kcf
     frontend:
       phases:
         preBuild:
           commands:
-            - envCache --set stackInfo ""
-            - npm ci
+            - npm ci --include=dev
         build:
           commands:
             - npx nx build kcf --prod
