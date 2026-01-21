@@ -155,3 +155,26 @@ jobs:
       # Trigger semantic release
       - name: Running Semantic-Release
         run: npx semantic-release@25.0.2
+
+  # Semantic-Release job
+  aws-deploy:
+    needs: build
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Install AWS CLI
+        uses: unfor19/install-aws-cli-action@v1
+        with:
+          version: 1
+
+      - name: Configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: <ROLE>
+          role-session-name: <ROLE_NAME>
+          aws-region: <AWS_REGION>
+
+      - uses: nrwl/nx-set-shas@v4
+      - run: npx nx affected -t deploy
