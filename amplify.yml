@@ -1,16 +1,19 @@
 version: 1
-frontend:
-  phases:
-    preBuild:
-      commands:
-        - npm ci --cache .npm --prefer-offline
-    # IMPORTANT - Please verify your build commands
-    build:
-      commands: []
-  artifacts:
-    baseDirectory: dist
-    files:
-      - '**/*'
-  cache:
-    paths:
-      - .npm/**/*
+applications:
+  - appRoot: apps/kcf
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm ci
+        build:
+          commands:
+            - npx nx build kcf --prod
+      artifacts:
+        baseDirectory: ../../dist/apps/kcf
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+          - .nx/cache/**/*
