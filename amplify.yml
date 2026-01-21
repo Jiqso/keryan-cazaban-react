@@ -1,19 +1,19 @@
 version: 1
 applications:
   - appRoot: apps/kcf/src/app
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - npm i
-        build:
-          commands:
-            - npx nx build kcf --prod
-      artifacts:
-        baseDirectory: ../../dist/apps/kcf
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
-          - .nx/cache/**/*
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm install
+    build:
+      commands:
+        - npx nx build kcf --prod
+  artifacts:
+    baseDirectory: dist/apps/kcf
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+      - .nx/cache/**/*
