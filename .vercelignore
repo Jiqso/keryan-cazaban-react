@@ -1,0 +1,7 @@
+node_modules
+.nx
+dist
+.cache
+coverage
+*.log
+.env*.local
