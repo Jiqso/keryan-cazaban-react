@@ -10,41 +10,38 @@ interface FadedNavigationItem {
 
 interface FadedNavigationProps {
   items: FadedNavigationItem[];
-  isScrolled?: boolean;
-  onScrolledChange?: (isScrolled: boolean) => void;
+  children?: React.ReactNode;
 }
-export function FadedNavigation({
-  items,
-  isScrolled: externalIsScrolled,
-  onScrolledChange,
-}: FadedNavigationProps) {
-  const [internalIsScrolled, setInternalIsScrolled] = useState(false);
+export function FadedNavigation({ items, children }: FadedNavigationProps) {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string>('');
-
-  // Use external state if provided, otherwise use internal
-  const isScrolled = externalIsScrolled !== undefined ? externalIsScrolled : internalIsScrolled;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleNavigationClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setInternalIsScrolled(true);
+    const contentElement = document.querySelector(`.${styles['content']}`) as HTMLElement;
+
+    if (element && contentElement) {
+      const elementDiv = (element as HTMLElement).offsetTop + 100;
+      contentElement.scrollTo({ top: elementDiv, behavior: 'smooth' });
+      setIsScrolled(true);
     }
+    // Close mobile menu after navigation
+    setIsMobileMenuOpen(false);
   };
 
   useEffect(() => {
+    // Get the content element to attach scroll listener
+    const contentElement = document.querySelector(`.${styles['content']}`) as HTMLElement;
+
+    if (!contentElement) return;
+
     const handleScroll = () => {
       const scrollThreshold = 100;
-      const scrolled = window.scrollY > scrollThreshold;
+      const scrolled = contentElement.scrollTop > scrollThreshold;
 
-      if (externalIsScrolled === undefined) {
-        setInternalIsScrolled(scrolled);
-      }
-
-      if (onScrolledChange) {
-        onScrolledChange(scrolled);
-      }
+      setIsScrolled(scrolled);
 
       // Detect active section based on scroll position
       const sections = items.map(item => document.getElementById(item.id));
@@ -63,16 +60,30 @@ export function FadedNavigation({
       requestAnimationFrame(handleScroll);
     };
 
-    window.addEventListener('scroll', throttledScroll, { passive: true });
+    contentElement.addEventListener('scroll', throttledScroll, { passive: true });
     handleScroll(); // Initial check
 
-    return () => window.removeEventListener('scroll', throttledScroll);
-  }, [items, externalIsScrolled, onScrolledChange]);
+    return () => contentElement.removeEventListener('scroll', throttledScroll);
+  }, [items]);
 
   return (
     <>
+      {/* Mobile Menu Backdrop */}
+      {isMobileMenuOpen && (
+        <div className={styles['mobile-backdrop']} onClick={() => setIsMobileMenuOpen(false)} />
+      )}
+
       {/* Top Horizontal Navigation */}
       <nav className={`${styles['top-nav']} ${isScrolled ? styles.hidden : ''}`}>
+        <button
+          className={styles['mobile-menu-toggle']}
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span className={styles['hamburger']}></span>
+          <span className={styles['hamburger']}></span>
+          <span className={styles['hamburger']}></span>
+        </button>
         <div className={styles['top-nav-content']}>
           {items.map(item => (
             <a
@@ -88,7 +99,19 @@ export function FadedNavigation({
       </nav>
 
       {/* Side Navigation Tree */}
-      <aside className={`${styles['side-nav']} ${isScrolled ? styles.visible : ''}`}>
+      <aside
+        className={`${styles['side-nav']} ${isScrolled ? styles.visible : ''} ${isMobileMenuOpen ? styles['mobile-open'] : ''}`}
+      >
+        {/* <button
+          style={{ marginTop: '1rem' }}
+          className={styles['mobile-menu-toggle']}
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span className={styles['hamburger']}></span>
+          <span className={styles['hamburger']}></span>
+          <span className={styles['hamburger']}></span>
+        </button> */}
         <nav className={styles['side-nav-content']}>
           {items.map(item => (
             <div key={item.id} className={styles['nav-item']}>
@@ -121,6 +144,11 @@ export function FadedNavigation({
           ))}
         </nav>
       </aside>
+
+      {/* Main Content Area */}
+      <main className={`${styles['content']} ${isScrolled ? styles['content-shifted'] : ''}`}>
+        {children}
+      </main>
     </>
   );
 }
