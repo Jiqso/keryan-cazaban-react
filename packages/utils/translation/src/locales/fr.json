@@ -2,18 +2,18 @@
   "HOMEPAGE": {
     "HOME": {
       "ABOUT": {
-        "DESCRIPTION": "Bonjour! Je suis Keryan Cazaban, un développeur full-stack passionné spécialisé dans la création d'expériences numériques exceptionnelles. Avec une expertise dans les technologies web modernes, j'aide les entreprises et les particuliers à transformer leurs idées en réalité.",
-        "DESCRIPTION_2": "Je me concentre sur la création d'applications performantes, maintenables et conviviales qui résolvent des problèmes réels. Que vous ayez besoin d'une application web complète, d'un site web responsive ou de solutions de développement personnalisées, je suis là pour vous aider."
+        "DESCRIPTION": "Bonjour! Je suis Keryan Cazaban, Développeur full-stack spécialisé en React et Node.js. Avec une expertise dans les technologies web modernes, j’aide les entreprises à construire des applications web performantes, maintenables et orientées utilisateur.",
+        "DESCRIPTION_2": "J’interviens aussi bien sur le front (React, TypeScript, UI) que sur le back (Node.js, API, bases de données), avec une forte attention portée à la qualité du code et à l’expérience utilisateur."
       },
       "CONTACT": {
         "EMAIL": "Email",
-        "INTRO": "Vous souhaitez travailler ensemble ? Vous avez un projet en tête ? J'aimerais vous entendre !",
+        "INTRO": "Vous souhaitez travailler ensemble ? Vous avez un projet en tête ? Contactez-moi via ces liens !",
         "FULLNAME": "Nom Complet",
         "MESSAGE": "Message",
         "SEND_MESSAGE": "Envoyer un Message"
       },
       "CONTACT_ME": "Me Contacter",
-      "JOB": "Développeur Full-Stack & Freelance",
+      "JOB": "Développeur Full-Stack React / Node.js | TypeScript | Freelance & CDI",
       "JOB_DESCRIPTION": "Création d'applications web modernes et évolutives avec des technologies de pointe. Donnons vie à vos idées.",
       "NAVIGATION": {
         "ABOUT": "À Propos de moi",
