@@ -20,6 +20,7 @@
     "customConditions": ["keryan-cazaban"],
     "baseUrl": "./",
     "paths": {
+      "@components/cards": ["packages/components/cards/src/index.ts"],
       "@layout/feature-layout": ["packages/layout/feature-layout/src/index.ts"],
       "@navigation/faded-navigation": ["packages/navigation/faded-navigation/src/index.ts"],
       "@utils/intl-helper": ["packages/utils/intl-helper/src/index.ts"],

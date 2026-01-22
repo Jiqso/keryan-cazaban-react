@@ -28,6 +28,9 @@
     },
     {
       "path": "./packages/utils/translation"
+    },
+    {
+      "path": "./packages/components/cards"
     }
   ]
 }
