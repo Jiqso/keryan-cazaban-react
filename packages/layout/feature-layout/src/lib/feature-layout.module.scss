@@ -1,24 +1,25 @@
-.container {
-  height: 100vh;
-  width: 100%;
-}
-
-.content {
-  transition: margin-left 0.3s ease-in-out;
-  overflow-x: hidden;
-  &-shifted {
-    margin-left: 250px;
-    transition: margin-left 0.3s ease-in-out;
-    overflow-x: hidden;
-  }
-}
-
 .section {
-  min-height: 80vh;
-  scroll-margin-top: 100px;
-  &-shifted {
-    padding-left: 4rem;
-    transition: padding-left 0.3s ease-in-out;
+  padding: 0rem 4rem;
+  &-title {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(
+        135deg,
+        rgba(30, 58, 138, 0.8),
+        rgba(67, 56, 202, 0.8),
+        rgba(109, 40, 217, 0.8)
+      )
+      1;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    font-family: 'Quicksand', sans-serif;
+  }
+  &:first-child {
+    padding: 0rem;
+  }
+  &:last-child {
+    padding-bottom: 2rem;
   }
 }
 
@@ -26,9 +27,8 @@
 .hero {
   position: relative;
   text-align: center;
-  // padding: 4rem 0;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: calc(100vh - 50px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,9 +51,9 @@
     bottom: -100%;
     background: radial-gradient(
       circle at 50% 50%,
-      rgba(124, 58, 237, 0.12) 0%,
-      rgba(34, 211, 238, 0.08) 35%,
-      rgba(31, 41, 55, 0.05) 60%,
+      rgba(125, 211, 252, 0.3) 0%,
+      rgba(96, 165, 250, 0.25) 35%,
+      rgba(167, 139, 250, 0.2) 60%,
       transparent 80%
     );
     animation: rotateGradient 20s linear infinite;
@@ -70,7 +70,7 @@
       height: 400px;
       top: -10%;
       left: -5%;
-      background: linear-gradient(135deg, rgba(124, 58, 237, 0.4), rgba(99, 102, 241, 0.3));
+      background: linear-gradient(135deg, rgba(167, 139, 250, 0.3), rgba(125, 211, 252, 0.25));
       animation: float1 18s ease-in-out infinite;
     }
 
@@ -79,7 +79,7 @@
       height: 350px;
       bottom: -10%;
       right: -5%;
-      background: linear-gradient(135deg, rgba(34, 211, 238, 0.35), rgba(59, 130, 246, 0.25));
+      background: linear-gradient(135deg, rgba(125, 211, 252, 0.3), rgba(96, 165, 250, 0.25));
       animation: float2 22s ease-in-out infinite;
     }
 
@@ -154,17 +154,6 @@
   }
 }
 
-/* Section Titles */
-.section-title {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #1a1a1a;
-  border-bottom: 3px solid #0070f3;
-  padding-bottom: 0.5rem;
-  display: inline-block;
-  font-family: 'Quicksand', sans-serif;
-}
-
 /* About Section */
 .about-content {
   max-width: 800px;
@@ -186,10 +175,17 @@
     margin-top: 2rem;
   }
   &-category {
-    background: #f9f9f9;
+    background: #dbeafe;
     padding: 2rem;
     border-radius: 8px;
-    border-left: 4px solid #0070f3;
+    border-left: 4px solid;
+    border-image: linear-gradient(
+        135deg,
+        rgba(186, 230, 253, 0.8),
+        rgba(147, 197, 253, 0.8),
+        rgba(196, 181, 253, 0.8)
+      )
+      1;
     & h3 {
       font-size: 1.3rem;
       margin-bottom: 1rem;
@@ -222,7 +218,7 @@
 .portfolio-placeholder {
   text-align: center;
   padding: 3rem;
-  background: #f9f9f9;
+  // background: #f9f9f9;
   border-radius: 8px;
   color: #666;
   font-size: 1.1rem;
@@ -232,7 +228,10 @@
 /* Contact Section */
 .contact {
   &-content {
-    max-width: 800px;
+    // width: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
     font-family: 'Quicksand', sans-serif;
   }
   &-intro {
@@ -247,13 +246,14 @@
     margin-bottom: 3rem;
   }
   &-method {
-    background: #f9f9f9;
-    padding: 1.5rem;
+    background: #dbeafe;
+    padding: 1rem;
     border-radius: 8px;
     & h3 {
       font-size: 1.2rem;
       margin-bottom: 0.5rem;
       color: #1a1a1a;
+      margin-top: 0rem;
     }
     & a {
       color: #0070f3;
@@ -265,7 +265,8 @@
     }
   }
   &-form {
-    background: #f9f9f9;
+    border: 1px solid #000;
+    background: #dbeafe;
     padding: 2rem;
     border-radius: 8px;
     & h3 {
@@ -273,65 +274,113 @@
       margin-bottom: 1.5rem;
       color: #1a1a1a;
     }
+    &-group {
+      margin-bottom: 1.5rem;
+      & label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        color: #333;
+      }
+      & input,
+      textarea {
+        width: 90%;
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-family: inherit;
+        transition: border-color 0.3s;
+      }
+      & input:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #0070f3;
+      }
+    }
   }
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-  & label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    color: #333;
-  }
-  & input,
-  textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ddd;
+  &-submit-button {
+    background-color: #0070f3;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
     border-radius: 4px;
     font-size: 1rem;
-    font-family: inherit;
-    transition: border-color 0.3s;
-  }
-  & input:focus,
-  textarea:focus {
-    outline: none;
-    border-color: #0070f3;
-  }
-}
-
-.submit-button {
-  background-color: #0070f3;
-  color: white;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  &:hover {
-    background-color: #0051cc;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: #0051cc;
+    }
   }
 }
 
 // For Mobile Responsiveness
 @media (max-width: 768px) {
-  .content-shifted {
-    padding-left: 2rem; // Keep normal padding on mobile
+  .section {
+    padding: 0rem 1.5rem;
+
+    &:first-child {
+      padding: 0rem;
+    }
+
+    &:last-child {
+      padding-bottom: 2rem;
+    }
   }
 
-  .hero-title {
-    font-size: 2.5rem;
+  .hero {
+    &-title {
+      font-size: 2rem;
+    }
+
+    &-subtitle {
+      font-size: 1.2rem;
+    }
+
+    &-description {
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .skills-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-content {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .cta-button {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 0rem 1rem;
+  }
+
+  .hero {
+    &-title {
+      font-size: 1.5rem;
+    }
+
+    &-subtitle {
+      font-size: 1rem;
+    }
+  }
+
+  .section-title {
+    font-size: 1.5rem;
   }
 }
 
