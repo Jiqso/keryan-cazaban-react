@@ -215,14 +215,30 @@
 }
 
 /* Portfolio Section */
-.portfolio-placeholder {
-  text-align: center;
-  padding: 3rem;
-  // background: #f9f9f9;
-  border-radius: 8px;
-  color: #666;
-  font-size: 1.1rem;
-  font-family: 'Quicksand', sans-serif;
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  gap: 1.5rem;
+  // margin-top: 2rem;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow-x: scroll;
+  &-placeholder {
+    text-align: center;
+    padding: 3rem;
+    // background: #f9f9f9;
+    border-radius: 8px;
+    color: #666;
+    font-size: 1.1rem;
+    font-family: 'Quicksand', sans-serif;
+  }
 }
 
 /* Contact Section */
@@ -349,6 +365,11 @@
   }
 
   .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .portfolio-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }

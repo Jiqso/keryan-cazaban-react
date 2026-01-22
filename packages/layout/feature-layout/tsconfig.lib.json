@@ -50,6 +50,9 @@
     },
     {
       "path": "../../utils/intl-helper/tsconfig.lib.json"
+    },
+    {
+      "path": "../../components/cards/tsconfig.lib.json"
     }
   ]
 }

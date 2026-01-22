@@ -1,5 +1,6 @@
 import styles from './feature-layout.module.scss';
 import { FadedNavigation } from '@navigation/faded-navigation';
+import { PortfolioCard } from '@components/cards';
 import { useIntl } from 'react-intl';
 
 export function FeatureLayout() {
@@ -196,10 +197,16 @@ export function FeatureLayout() {
             <h2 className={styles['section-title']}>
               {intl.formatMessage({ id: 'HOMEPAGE.HOME.NAVIGATION.PORTFOLIO' })}
             </h2>
-            <p className={styles['portfolio-placeholder']}>
-              {intl.formatMessage({ id: 'HOMEPAGE.HOME.PORTFOLIO.PLACEHOLDER' })}
-            </p>
-            {/* Future portfolio items will be added here */}
+            <div className={styles['portfolio-grid']}>
+              <PortfolioCard
+                companyName="MyHobbyPlace"
+                // projectTitle="E-commerce Platform"
+                // description="A modern e-commerce solution with real-time inventory management, secure payment processing, and responsive design."
+                previewImage="/websiteScreenshot/MyHobbyPlace.png"
+                websiteUrl="https://app.my-hobby-place.com/marketplace"
+                // tags={['React', 'TypeScript', 'Node.js', 'MongoDB']}
+              />
+            </div>
           </section>
 
           <section id="contact" className={styles['section']}>
