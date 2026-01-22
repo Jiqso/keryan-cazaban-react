@@ -1,10 +1,15 @@
-import { render } from '@testing-library/react';
+import { IntlHelper } from '@utils/intl-helper';
+import { IntlMessages } from '@utils/translation';
 
-import Cards from './cards';
+import { PortfolioCard } from './cards';
 
 describe('Cards', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Cards />);
+    const { baseElement } = IntlHelper(
+      <PortfolioCard companyName={''} />,
+      'en',
+      IntlMessages('en'),
+    );
     expect(baseElement).toBeTruthy();
   });
 });
