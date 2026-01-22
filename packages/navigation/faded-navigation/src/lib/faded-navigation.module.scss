@@ -7,7 +7,15 @@
   left: 0;
   right: 0;
   height: 50px;
-  background: white;
+  background: linear-gradient(
+    135deg,
+    rgba(30, 58, 138, 0.85),
+    rgba(67, 56, 202, 0.85),
+    rgba(109, 40, 217, 0.85)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   transition:
@@ -25,13 +33,13 @@
     display: flex;
     gap: 2rem;
     padding: 1rem 2rem;
-    max-width: 1200px;
+    width: 100vw;
     margin: 0 auto;
     font-family: 'Quicksand', sans-serif;
   }
   &-link {
     text-decoration: none;
-    color: #333;
+    color: rgba(255, 255, 255, 0.95);
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -39,11 +47,11 @@
       background-color 0.2s,
       color 0.2s;
     &:hover {
-      background-color: #f5f5f5;
+      background-color: rgba(255, 255, 255, 0.2);
     }
     &.active {
-      color: #0070f3;
-      background-color: #e6f3ff;
+      color: #ffffff;
+      background-color: rgba(255, 255, 255, 0.25);
     }
   }
 }
@@ -61,9 +69,19 @@
   opacity: 0;
   overflow-y: auto;
   font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(
+    180deg,
+    rgba(30, 58, 138, 0.85),
+    rgba(67, 56, 202, 0.85),
+    rgba(109, 40, 217, 0.85)
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
   &.visible {
     transform: translateX(0);
-    opacity: 1;
+    transition: transform 0.3s ease-in-out;
+    opacity: 0.8;
   }
   &-content {
     padding: 2rem 1.5rem;
@@ -72,7 +90,7 @@
   &-child-link {
     display: block;
     text-decoration: none;
-    color: #666;
+    color: rgba(255, 255, 255, 0.8);
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
     transition:
@@ -80,18 +98,18 @@
       background-color 0.2s;
     border-radius: 4px;
     &:hover {
-      color: #333;
-      background-color: #f9f9f9;
+      color: #ffffff;
+      background-color: rgba(255, 255, 255, 0.15);
     }
     &.active {
-      color: #0070f3;
-      background-color: #e6f3ff;
+      color: #ffffff;
+      background-color: rgba(255, 255, 255, 0.2);
     }
   }
   &-link {
     display: block;
     text-decoration: none;
-    color: #333;
+    color: rgba(255, 255, 255, 0.95);
     font-weight: 400;
     padding: 0.75rem 1rem;
     border-radius: 4px;
@@ -100,12 +118,12 @@
       color 0.2s;
     border-left: 3px solid transparent;
     &:hover {
-      background-color: #f5f5f5;
+      background-color: rgba(255, 255, 255, 0.15);
     }
     &.active {
-      color: #0070f3;
-      background-color: #e6f3ff;
-      border-left-color: #0070f3;
+      color: #ffffff;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-left-color: #ffffff;
       font-size: 1.2rem;
       font-weight: 500;
     }
@@ -120,5 +138,147 @@
   }
   &-item {
     margin-bottom: 0.5rem;
+  }
+}
+
+.content {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(100vh - 50px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #eff6ff;
+  transition: 0.3s ease-in-out;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(30, 58, 138, 0.1);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(67, 56, 202, 0.6), rgba(109, 40, 217, 0.6));
+    border-radius: 10px;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: linear-gradient(180deg, rgba(67, 56, 202, 0.8), rgba(109, 40, 217, 0.8));
+    }
+  }
+
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(109, 40, 217, 0.6) rgba(30, 58, 138, 0.1);
+
+  &-shifted {
+    transition: 0.3s ease-in-out;
+    height: 100%;
+    top: 0;
+    left: 250px;
+    margin-bottom: 2rem;
+  }
+}
+
+// Hamburger Menu Button (Mobile)
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  left: 1rem;
+  z-index: 10;
+
+  .hamburger {
+    width: 30px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+}
+
+.mobile-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+}
+
+// Mobile Responsive Styles
+@media screen and (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .top-nav {
+    &-content {
+      display: none;
+    }
+    &.hidden {
+      transform: none;
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  .side-nav {
+    width: 280px;
+    z-index: 1001;
+    top: 50px;
+
+    &.mobile-open {
+      transform: translateX(0);
+      opacity: 0.95;
+      top: 50px;
+    }
+
+    // Keep side nav visible on scroll for mobile
+    &.visible {
+      transition: 0.3s ease-in-out;
+      transform: translateX(-100%);
+      opacity: 0;
+
+      &.mobile-open {
+        transform: translateX(0);
+        opacity: 0.95;
+      }
+    }
+  }
+
+  .content {
+    left: 0 !important;
+    width: 100%;
+
+    &-shifted {
+      left: 0 !important;
+      padding-left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .side-nav {
+    width: 100%;
+    max-width: 320px;
   }
 }
