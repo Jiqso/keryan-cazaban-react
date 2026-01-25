@@ -8,7 +8,11 @@
     "packages/layout/*",
     "packages/navigation/*",
     "packages/utils/*",
-    "packages/components/*"
+    "packages/components/*",
+    "packages/kcf/components/*",
+    "packages/kcf/layout/*",
+    "packages/kcf/navigation/*",
+    "packages/kcf/utils/*"
   ],
   "devDependencies": {
     "@babel/core": "^7.14.5",
