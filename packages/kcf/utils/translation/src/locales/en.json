@@ -48,5 +48,13 @@
         "TOOLS_TITLE": "Tools & Platforms"
       }
     }
+  },
+  "COMPONENTS": {
+    "CARDS": {
+      "PORTFOLIO": {
+        "PREVIEW_UNAVAILABLE": "Preview unavailable",
+        "VISIT_WEBSITE": "Visit Website"
+      }
+    }
   }
 }

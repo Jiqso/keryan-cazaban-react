@@ -1,5 +1,6 @@
 import styles from './cards.module.scss';
 import { useState } from 'react';
+import { useIntl } from 'react-intl';
 
 export interface PortfolioCardProps {
   companyName: string;
@@ -7,7 +8,7 @@ export interface PortfolioCardProps {
   description?: string;
   previewImage?: string;
   websiteUrl?: string;
-  tags?: string[];
+  // tags?: string[];
 }
 
 export function PortfolioCard({
@@ -16,9 +17,10 @@ export function PortfolioCard({
   description,
   previewImage,
   websiteUrl,
-  tags = [],
+  // tags = [],
 }: PortfolioCardProps) {
   const [imageError, setImageError] = useState(false);
+  const intl = useIntl();
 
   return (
     <div className={styles['card']}>
@@ -38,7 +40,9 @@ export function PortfolioCard({
           />
         ) : (
           <div className={styles['preview-placeholder']}>
-            <span>Preview Unavailable</span>
+            <span>
+              {intl.formatMessage({ id: 'COMPONENTS.CARDS.PORTFOLIO.PREVIEW_UNAVAILABLE' })}
+            </span>
           </div>
         )}
       </div>
@@ -69,19 +73,11 @@ export function PortfolioCard({
               className={styles['visit-button']}
               onClick={e => e.stopPropagation()}
             >
-              Visit Website →
+              {intl.formatMessage({ id: 'COMPONENTS.CARDS.PORTFOLIO.VISIT_WEBSITE' })} →
             </a>
           )}
         </div>
       )}
-    </div>
-  );
-}
-
-export function PortfolioCards() {
-  return (
-    <div className={styles['container']}>
-      <h1>Welcome to Cards!</h1>
     </div>
   );
 }

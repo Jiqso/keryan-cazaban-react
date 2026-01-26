@@ -6,7 +6,7 @@ import { PortfolioCard } from './cards';
 describe('Cards', () => {
   it('should render successfully', () => {
     const { baseElement } = IntlHelper(
-      <PortfolioCard companyName={''} />,
+      <PortfolioCard companyName={'Company Test'} />,
       'en',
       IntlMessages('en'),
     );
