@@ -37,6 +37,9 @@
     },
     {
       "path": "./apps/kcb"
+    },
+    {
+      "path": "./packages/kcb/homepage"
     }
   ]
 }
