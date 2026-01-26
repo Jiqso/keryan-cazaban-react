@@ -19,6 +19,9 @@ export default defineConfig(() => ({
   // worker: {
   //  plugins: [],
   // },
+  resolve: {
+    conditions: ['keryan-cazaban', 'import', 'module', 'browser', 'default'],
+  },
   build: {
     outDir: './dist',
     emptyOutDir: true,
