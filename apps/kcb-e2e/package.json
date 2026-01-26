@@ -6,6 +6,10 @@
     "implicitDependencies": [
       "kcb"
     ],
+    "tags": [
+      "scope:kcb",
+      "type:app-e2e"
+    ],
     "targets": {
       "e2e": {
         "executor": "@nx/jest:jest",
