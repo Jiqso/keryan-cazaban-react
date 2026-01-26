@@ -2,16 +2,16 @@
   "name": "@navigation/faded-navigation",
   "version": "0.0.1",
   "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "../../../../../dist/packages/kcf/navigation/faded-navigation/index.js",
+  "module": "../../../../../dist/packages/kcf/navigation/faded-navigation/index.js",
+  "types": "../../../../../dist/packages/kcf/navigation/faded-navigation/index.d.ts",
   "exports": {
     "./package.json": "./package.json",
     ".": {
       "keryan-cazaban": "./src/index.ts",
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "default": "./dist/index.js"
+      "types": "../../../../../dist/packages/kcf/navigation/faded-navigation/index.d.ts",
+      "import": "../../../../../dist/packages/kcf/navigation/faded-navigation/index.js",
+      "default": "../../../../../dist/packages/kcf/navigation/faded-navigation/index.js"
     }
   },
   "nx": {

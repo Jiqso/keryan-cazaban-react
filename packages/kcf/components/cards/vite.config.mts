@@ -10,7 +10,7 @@ export default defineConfig(() => ({
   //  plugins: [],
   // },
   build: {
-    outDir: './dist',
+    outDir: '../../../../dist/packages/kcf/components/cards',
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
