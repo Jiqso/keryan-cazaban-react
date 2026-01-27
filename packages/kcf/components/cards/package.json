@@ -1,0 +1,22 @@
+{
+  "name": "@components/cards",
+  "version": "0.0.1",
+  "main": "../../../../../dist/packages/kcf/components/cards/index.js",
+  "module": "../../../../../dist/packages/kcf/components/cards/index.js",
+  "types": "../../../../../dist/packages/kcf/components/cards/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "keryan-cazaban": "./src/index.ts",
+      "types": "../../../../../dist/packages/kcf/components/cards/index.d.ts",
+      "import": "../../../../../dist/packages/kcf/components/cards/index.js",
+      "default": "../../../../../dist/packages/kcf/components/cards/index.js"
+    }
+  },
+  "nx": {
+    "tags": [
+      "scope:kcf",
+      "type:ui"
+    ]
+  }
+}

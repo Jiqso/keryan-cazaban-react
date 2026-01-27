@@ -19,8 +19,11 @@ export default defineConfig(() => ({
   // worker: {
   //  plugins: [],
   // },
+  resolve: {
+    conditions: ['keryan-cazaban', 'import', 'module', 'browser', 'default'],
+  },
   build: {
-    outDir: './dist',
+    outDir: '../../dist/apps/kcf',
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {

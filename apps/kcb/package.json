@@ -1,0 +1,76 @@
+{
+  "name": "kcb",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "targets": {
+      "build": {
+        "executor": "@nx/webpack:webpack",
+        "outputs": [
+          "{options.outputPath}"
+        ],
+        "defaultConfiguration": "production",
+        "options": {
+          "target": "node",
+          "compiler": "tsc",
+          "outputPath": "dist/apps/kcb",
+          "main": "apps/kcb/src/main.ts",
+          "tsConfig": "apps/kcb/tsconfig.app.json",
+          "assets": [
+            "apps/kcb/src/assets"
+          ],
+          "webpackConfig": "apps/kcb/webpack.config.js"
+        },
+        "configurations": {
+          "development": {
+            "optimization": false,
+            "extractLicenses": false,
+            "inspect": false,
+            "sourceMap": true
+          },
+          "production": {
+            "optimization": true,
+            "extractLicenses": true,
+            "inspect": false,
+            "sourceMap": false
+          }
+        }
+      },
+      "serve": {
+        "executor": "nx:run-commands",
+        "defaultConfiguration": "development",
+        "options": {
+          "commands": [
+            "npx webpack --watch --mode=development --config apps/kcb/webpack.config.js",
+            "npx nodemon --watch dist/apps/kcb dist/apps/kcb/main.js"
+          ],
+          "parallel": true
+        },
+        "configurations": {
+          "development": {},
+          "production": {
+            "commands": [
+              "npx webpack --mode=production --config apps/kcb/webpack.config.js",
+              "node dist/apps/kcb/main.js"
+            ]
+          }
+        }
+      }
+    },
+    "tags": [
+      "scope:kcb",
+      "type:app"
+    ]
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.0.0",
+    "@nestjs/core": "^11.0.0",
+    "@nestjs/platform-express": "^11.0.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "^11.0.0"
+  }
+}

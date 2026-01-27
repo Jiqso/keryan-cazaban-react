@@ -15,22 +15,31 @@
       "path": "./apps/kcf"
     },
     {
-      "path": "./packages/layout/feature-layout"
+      "path": "./packages/kcf/navigation/faded-navigation"
     },
     {
-      "path": "./packages/navigation/faded-navigation"
+      "path": "./packages/kcf/utils/language-provider"
     },
     {
-      "path": "./packages/utils/language-provider"
+      "path": "./packages/kcf/layout/feature-layout"
     },
     {
-      "path": "./packages/utils/intl-helper"
+      "path": "./packages/kcf/utils/intl-helper"
     },
     {
-      "path": "./packages/utils/translation"
+      "path": "./packages/kcf/utils/translation"
     },
     {
-      "path": "./packages/components/cards"
+      "path": "./packages/kcf/components/cards"
+    },
+    {
+      "path": "./apps/kcb-e2e"
+    },
+    {
+      "path": "./apps/kcb"
+    },
+    {
+      "path": "./packages/kcb/homepage"
     }
   ]
 }
