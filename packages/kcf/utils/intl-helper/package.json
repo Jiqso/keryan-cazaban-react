@@ -1,0 +1,22 @@
+{
+  "name": "@utils/intl-helper",
+  "version": "0.0.1",
+  "main": "../../../../../dist/packages/kcf/utils/intl-helper/index.js",
+  "module": "../../../../../dist/packages/kcf/utils/intl-helper/index.js",
+  "types": "../../../../../dist/packages/kcf/utils/intl-helper/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "keryan-cazaban": "./src/index.ts",
+      "types": "../../../../../dist/packages/kcf/utils/intl-helper/index.d.ts",
+      "import": "../../../../../dist/packages/kcf/utils/intl-helper/index.js",
+      "default": "../../../../../dist/packages/kcf/utils/intl-helper/index.js"
+    }
+  },
+  "nx": {
+    "tags": [
+      "scope:kcf",
+      "type:util"
+    ]
+  }
+}

@@ -20,12 +20,13 @@
     "customConditions": ["keryan-cazaban"],
     "baseUrl": "./",
     "paths": {
-      "@components/cards": ["packages/components/cards/src/index.ts"],
-      "@layout/feature-layout": ["packages/layout/feature-layout/src/index.ts"],
-      "@navigation/faded-navigation": ["packages/navigation/faded-navigation/src/index.ts"],
-      "@utils/intl-helper": ["packages/utils/intl-helper/src/index.ts"],
-      "@utils/translation": ["packages/utils/translation/src/index.ts"],
-      "@utils/language-provider": ["packages/utils/language-provider/src/index.ts"]
+      "@components/cards": ["packages/kcf/components/cards/src/index.ts"],
+      "@layout/feature-layout": ["packages/kcf/layout/feature-layout/src/index.ts"],
+      "@navigation/faded-navigation": ["packages/kcf/navigation/faded-navigation/src/index.ts"],
+      "@utils/intl-helper": ["packages/kcf/utils/intl-helper/src/index.ts"],
+      "@utils/translation": ["packages/kcf/utils/translation/src/index.ts"],
+      "@utils/language-provider": ["packages/kcf/utils/language-provider/src/index.ts"],
+      "@kcb/homepage": ["packages/kcb/homepage/src/index.ts"]
     }
   }
 }
