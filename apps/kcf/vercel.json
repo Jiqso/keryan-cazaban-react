@@ -1,8 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "nx build kcf",
+  "buildCommand": "cd ../.. && nx build kcf",
   "outputDirectory": "../../dist/apps/kcf",
-  "installCommand": "npm install",
+  "installCommand": "cd ../.. && npm install",
   "framework": null,
   "rewrites": [
     {
