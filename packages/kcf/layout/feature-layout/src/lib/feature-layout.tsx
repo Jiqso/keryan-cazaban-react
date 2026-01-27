@@ -2,9 +2,59 @@ import styles from './feature-layout.module.scss';
 import { FadedNavigation } from '@navigation/faded-navigation';
 import { PortfolioCard } from '@components/cards';
 import { useIntl } from 'react-intl';
+import { useQuery } from '@tanstack/react-query';
 
 export function FeatureLayout() {
   const intl = useIntl();
+
+  const {
+    data: homepageData,
+    isLoading,
+    error,
+  } = useQuery({
+    queryKey: ['homepage'],
+    queryFn: async () => {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/homepage`);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    },
+  });
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+
+    const formData = {
+      name: (form.elements.namedItem('name') as HTMLInputElement).value,
+      email: (form.elements.namedItem('email') as HTMLInputElement).value,
+      message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
+    };
+
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/homepage/contact`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to send message');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log('Message sent successfully:', data);
+        form.reset();
+        // You can add a success message to the user here
+      })
+      .catch(error => {
+        console.error('Error sending message:', error);
+        // You can add an error message to the user here
+      });
+  }
 
   const navigationItems = [
     {
@@ -33,6 +83,18 @@ export function FeatureLayout() {
       href: '#contact',
     },
   ];
+
+  if (isLoading) {
+    console.log('Loading homepage data...');
+  }
+
+  if (error) {
+    console.error('Error fetching homepage data:', error);
+  }
+
+  if (homepageData) {
+    console.log('Homepage data:', homepageData);
+  }
 
   return (
     <FadedNavigation
@@ -248,7 +310,7 @@ export function FeatureLayout() {
                     id: 'HOMEPAGE.HOME.CONTACT.SEND_MESSAGE',
                   })}
                 </h3>
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div className={styles['contact-form-group']}>
                     <label htmlFor="name">
                       {intl.formatMessage({
