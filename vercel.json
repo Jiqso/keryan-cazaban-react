@@ -1,14 +1,24 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "npx nx build kcf --prod",
+  "version": 2,
+  "buildCommand": "npx nx build kcf --prod && npx nx build kcb --prod",
   "outputDirectory": "dist/apps/kcf",
-  "devCommand": "npx nx serve kcf",
   "installCommand": "npm install",
   "framework": null,
-  "rewrites": [
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "dist/apps/kcb/main.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "dist/apps/kcb/main.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
