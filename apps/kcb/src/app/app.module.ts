@@ -1,9 +1,45 @@
 import { Module } from '@nestjs/common';
+import { ConfigModule, ConfigService } from '@nestjs/config';
+import { MailerModule } from '@nestjs-modules/mailer';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { HomepageModule } from '@kcb/homepage';
 
 @Module({
-  imports: [],
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: [`apps/kcb/.env`],
+    }),
+    MailerModule.forRootAsync({
+      inject: [ConfigService],
+      useFactory: (configService: ConfigService) => {
+        const config = {
+          transport: {
+            service: 'Gmail',
+            auth: {
+              type: 'OAuth2',
+              user: configService.get<string>('GMAIL_USER'),
+              clientId: configService.get<string>('GMAIL_CLIENT_ID'),
+              clientSecret: configService.get<string>('GMAIL_CLIENT_SECRET'),
+              refreshToken: configService.get<string>('GMAIL_REFRESH_TOKEN'),
+              accessToken: configService.get<string>('GMAIL_ACCESS_TOKEN'),
+            },
+          } as any,
+        };
+
+        console.log('Mailer config:', {
+          user: config.transport.auth.user,
+          clientId: config.transport.auth.clientId ? '***' : 'missing',
+          clientSecret: config.transport.auth.clientSecret ? '***' : 'missing',
+          refreshToken: config.transport.auth.refreshToken ? '***' : 'missing',
+        });
+
+        return config;
+      },
+    }),
+    HomepageModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
