@@ -18,13 +18,17 @@ import { HomepageModule } from '@kcb/homepage';
           transport: {
             service: 'Gmail',
             auth: {
-              type: 'OAuth2',
               user: configService.get<string>('GMAIL_USER'),
-              clientId: configService.get<string>('GMAIL_CLIENT_ID'),
-              clientSecret: configService.get<string>('GMAIL_CLIENT_SECRET'),
-              refreshToken: configService.get<string>('GMAIL_REFRESH_TOKEN'),
-              accessToken: configService.get<string>('GMAIL_ACCESS_TOKEN'),
+              pass: configService.get<string>('GMAIL_PASSWORD'), // App Password
             },
+            // auth: {
+            //   type: 'OAuth2',
+            //   user: configService.get<string>('GMAIL_USER'),
+            //   clientId: configService.get<string>('GMAIL_CLIENT_ID'),
+            //   clientSecret: configService.get<string>('GMAIL_CLIENT_SECRET'),
+            //   refreshToken: configService.get<string>('GMAIL_REFRESH_TOKEN'),
+            //   accessToken: configService.get<string>('GMAIL_ACCESS_TOKEN'),
+            // },
           } as any,
         };
       },
