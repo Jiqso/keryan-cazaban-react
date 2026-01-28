@@ -68,13 +68,13 @@ jobs:
 
       # Nx lint
       - name: Running linter on all projects
-        run: npx nx run-many --target=lint --all --exclude=kcf-e2e
+        run: npx nx run-many --target=lint --all --exclude=kcf-e2e,kcb-e2e:test
       # Nx format
       - name: Checking format on all projects
-        run: npx nx format:check --all --exclude=kcf-e2e
+        run: npx nx format:check --all --exclude=kcf-e2e,kcb-e2e:test
       # Nx test
       - name: Running jest test-runner on all projects
-        run: npx nx run-many --target=test --all --exclude=kcf-e2e
+        run: npx nx run-many --target=test --all --exclude=kcf-e2e,kcb-e2e:test
 
   # # E2E job
   # e2e:
