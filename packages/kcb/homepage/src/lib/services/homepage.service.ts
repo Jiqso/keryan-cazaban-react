@@ -5,8 +5,6 @@ import * as nodemailer from 'nodemailer';
 
 @Injectable()
 export class HomepageService {
-  constructor() {}
-
   getData(): { message: string } {
     return {
       message: 'Hi, welcome to the homepage part of the api',
