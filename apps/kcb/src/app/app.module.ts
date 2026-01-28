@@ -14,7 +14,7 @@ import { HomepageModule } from '@kcb/homepage';
     MailerModule.forRootAsync({
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => {
-        const config = {
+        return {
           transport: {
             service: 'Gmail',
             auth: {
@@ -27,15 +27,6 @@ import { HomepageModule } from '@kcb/homepage';
             },
           } as any,
         };
-
-        console.log('Mailer config:', {
-          user: config.transport.auth.user,
-          clientId: config.transport.auth.clientId ? '***' : 'missing',
-          clientSecret: config.transport.auth.clientSecret ? '***' : 'missing',
-          refreshToken: config.transport.auth.refreshToken ? '***' : 'missing',
-        });
-
-        return config;
       },
     }),
     HomepageModule,

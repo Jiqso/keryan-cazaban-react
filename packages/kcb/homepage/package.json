@@ -19,5 +19,7 @@
       "type:data-access"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "googleapis": "^133.0.0"
+  }
 }

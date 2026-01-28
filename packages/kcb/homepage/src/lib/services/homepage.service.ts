@@ -1,10 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import { MailerService } from '@nestjs-modules/mailer';
 import { ContactDto } from '../dto/contact.dto';
+import { google } from 'googleapis';
+import * as nodemailer from 'nodemailer';
 
 @Injectable()
 export class HomepageService {
-  constructor(private readonly mailerService: MailerService) {}
+  constructor() {}
 
   getData(): { message: string } {
     return {
@@ -15,7 +16,34 @@ export class HomepageService {
   async sendEmail(contactDto: ContactDto): Promise<{ message: string }> {
     const { email, message, name } = contactDto;
 
-    await this.mailerService.sendMail({
+    // Gmail OAuth2 credentials from environment variables
+    const CLIENT_ID = process.env.GMAIL_CLIENT_ID;
+    const CLIENT_SECRET = process.env.GMAIL_CLIENT_SECRET;
+    const REFRESH_TOKEN = process.env.GMAIL_REFRESH_TOKEN;
+    const USER = process.env.GMAIL_USER;
+
+    const oAuth2Client = new google.auth.OAuth2(
+      CLIENT_ID,
+      CLIENT_SECRET,
+      'https://developers.google.com/oauthplayground', // redirect URL, not used for refresh
+    );
+    oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
+
+    const accessToken = await oAuth2Client.getAccessToken();
+
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        type: 'OAuth2',
+        user: USER,
+        clientId: CLIENT_ID,
+        clientSecret: CLIENT_SECRET,
+        refreshToken: REFRESH_TOKEN,
+        accessToken: accessToken?.token,
+      },
+    });
+
+    await transporter.sendMail({
       to: 'keryan.cazaban@gmail.com',
       subject: `New Contact Form Submission from ${name || email}`,
       html: `
