@@ -2,6 +2,10 @@
   "name": "keryan-cazaban",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "start": "node dist/apps/kcb/main",
+    "heroku-postbuild": "nx build kcf —-prod && nx build kcb --prod"
+  },
   "workspaces": [
     "apps/*",
     "packages/*",
