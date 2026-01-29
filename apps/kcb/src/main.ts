@@ -1,9 +1,11 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app/app.module';
 import { ConfigService } from '@nestjs/config';
+import * as path from 'path';
+import { NestExpressApplication } from '@nestjs/platform-express';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create<NestExpressApplication>(AppModule);
   const configService = app.get(ConfigService);
 
   // Enable CORS
@@ -14,6 +16,16 @@ async function bootstrap() {
   });
 
   const port = configService.get<number>('PORT') || 3000;
+
+  if (process.env['NX_HOST_ON_HEROKU'] === 'true') {
+    const clientPath = path.resolve(__dirname, '../kcf/');
+    app.useStaticAssets(clientPath);
+    // SPA fallback: serve index.html for all unmatched routes
+    app.getHttpAdapter().get('*', (req: any, res: any) => {
+      res.sendFile('index.html', { root: clientPath });
+    });
+  }
+
   await app.listen(port);
 }
 
