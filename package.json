@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node dist/apps/kcb/main",
-    "heroku-postbuild": "nx build kcf —-prod && nx build kcb --prod"
+    "heroku-postbuild": "nx build kcf && nx build kcb"
   },
   "workspaces": [
     "apps/*",
