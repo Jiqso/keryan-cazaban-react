@@ -20,10 +20,7 @@ async function bootstrap() {
   if (process.env['NX_HOST_ON_HEROKU'] === 'true') {
     const clientPath = path.resolve(__dirname, '../kcf/');
     app.useStaticAssets(clientPath);
-    // SPA fallback: serve index.html for all unmatched routes
-    app.getHttpAdapter().get('*', (req: any, res: any) => {
-      res.sendFile('index.html', { root: clientPath });
-    });
+    await import('./app/spa-fallback.controller.ts');
   }
 
   await app.listen(port);
