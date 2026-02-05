@@ -20,13 +20,27 @@
     "customConditions": ["keryan-cazaban"],
     "baseUrl": "./",
     "paths": {
-      "@components/cards": ["packages/kcf/components/cards/src/index.ts"],
-      "@layout/feature-layout": ["packages/kcf/layout/feature-layout/src/index.ts"],
-      "@navigation/faded-navigation": ["packages/kcf/navigation/faded-navigation/src/index.ts"],
-      "@utils/intl-helper": ["packages/kcf/utils/intl-helper/src/index.ts"],
-      "@utils/translation": ["packages/kcf/utils/translation/src/index.ts"],
-      "@utils/language-provider": ["packages/kcf/utils/language-provider/src/index.ts"],
-      "@kcb/homepage": ["packages/kcb/homepage/src/index.ts"]
+      // KCF
+      // Front-end packages
+      "@packages/kcf/utils/translation": ["packages/kcf/utils/translation/src/index.ts"],
+      "@packages/kcf/homepage/feature-homepage": [
+        "packages/kcf/homepage/feature-homepage/src/index.ts"
+      ],
+      "@packages/kcf/marketplace/feature-marketplace": [
+        "packages/kcf/marketplace/feature-marketplace/src/index.ts"
+      ],
+      // Back-end packages
+      "@packages/kcb/homepage": ["packages/kcb/homepage/src/index.ts"],
+
+      // Shared packages
+      "@packages/shared/components/cards": ["packages/shared/components/cards/src/index.ts"],
+      "@packages/shared/utils/language-provider": [
+        "packages/shared/utils/language-provider/src/index.ts"
+      ],
+      "@packages/shared/navigation/faded-navigation": [
+        "packages/shared/navigation/faded-navigation/src/index.ts"
+      ],
+      "@packages/shared/utils/intl-helper": ["packages/shared/utils/intl-helper/src/index.ts"]
     }
   }
 }
