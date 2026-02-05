@@ -8,7 +8,7 @@ export interface PortfolioCardProps {
   description?: string;
   previewImage?: string;
   websiteUrl?: string;
-  // tags?: string[];
+  tags?: string[];
 }
 
 export function PortfolioCard({
@@ -17,7 +17,7 @@ export function PortfolioCard({
   description,
   previewImage,
   websiteUrl,
-  // tags = [],
+  tags = [],
 }: PortfolioCardProps) {
   const [imageError, setImageError] = useState(false);
   const intl = useIntl();
@@ -50,19 +50,19 @@ export function PortfolioCard({
       {/* Project Details */}
       {(websiteUrl || description || projectTitle) && (
         <div className={styles['card-content']}>
-          {/* <h4 className={styles['project-title']}>{projectTitle}</h4> */}
-          {/* {description && <p className={styles['description']}>{description}</p>} */}
+          <h4 className={styles['project-title']}>{projectTitle}</h4>
+          {description && <p className={styles['description']}>{description}</p>}
 
           {/* Tags */}
-          {/* {tags.length > 0 && (
-          <div className={styles['tags']}>
-            {tags.map((tag, index) => (
-              <span key={index} className={styles['tag']}>
-                {tag}
-              </span>
-            ))}
-          </div>
-        )} */}
+          {tags.length > 0 && (
+            <div className={styles['tags']}>
+              {tags.map((tag, index) => (
+                <span key={index} className={styles['tag']}>
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
 
           {/* Visit Button */}
           {websiteUrl && (
