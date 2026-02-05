@@ -1,5 +1,5 @@
 {
-  "name": "packages/kcf/homepage/feature-homepage",
+  "name": "@homepage/feature-homepage",
   "version": "0.0.1",
   "type": "module",
   "main": "../../../../../dist/packages/kcf/homepage/feature-homepage/index.js",

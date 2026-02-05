@@ -1,5 +1,5 @@
 {
-  "name": "@packages/shared/navigation/sticky-navigation",
+  "name": "@navigation/sticky-navigation",
   "version": "0.0.1",
   "type": "module",
   "main": "../../../../../dist/packages/shared/navigation/sticky-navigation/index.js",

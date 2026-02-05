@@ -1,5 +1,5 @@
 {
-  "name": "@packages/shared/utils/intl-helper",
+  "name": "@utils/intl-helper",
   "version": "0.0.1",
   "main": "../../../../../dist/packages/shared/utils/intl-helper/index.js",
   "module": "../../../../../dist/packages/shared/utils/intl-helper/index.js",

@@ -1,5 +1,5 @@
 {
-  "name": "@packages/shared/components/cards",
+  "name": "@components/cards",
   "version": "0.0.1",
   "main": "../../../../../dist/packages/shared/components/cards/index.js",
   "module": "../../../../../dist/packages/shared/components/cards/index.js",
