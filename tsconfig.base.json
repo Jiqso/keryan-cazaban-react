@@ -40,6 +40,9 @@
       "@packages/shared/navigation/faded-navigation": [
         "packages/shared/navigation/faded-navigation/src/index.ts"
       ],
+      "@packages/shared/navigation/sticky-navigation": [
+        "packages/shared/navigation/sticky-navigation/src/index.ts"
+      ],
       "@packages/shared/utils/intl-helper": ["packages/shared/utils/intl-helper/src/index.ts"]
     }
   }

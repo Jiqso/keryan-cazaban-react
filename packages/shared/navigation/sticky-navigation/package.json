@@ -13,5 +13,11 @@
       "import": "../../../../../dist/packages/shared/navigation/sticky-navigation/index.js",
       "default": "../../../../../dist/packages/shared/navigation/sticky-navigation/index.js"
     }
+  },
+  "nx": {
+    "tags": [
+      "scope:shared",
+      "type:feature"
+    ]
   }
 }

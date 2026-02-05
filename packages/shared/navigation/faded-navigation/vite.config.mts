@@ -7,7 +7,7 @@ import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig(() => ({
   root: import.meta.dirname,
-  cacheDir: '../../../node_modules/.vite/packages/navigation/faded-navigation',
+  cacheDir: '../../../../node_modules/.vite/packages/shared/navigation/faded-navigation',
   plugins: [
     react(),
     nxViteTsPaths(),
@@ -20,7 +20,7 @@ export default defineConfig(() => ({
   // Configuration for building your library.
   // See: https://vite.dev/guide/build.html#library-mode
   build: {
-    outDir: '../../../../dist/packages/kcf/navigation/faded-navigation',
+    outDir: '../../../../dist/packages/shared/navigation/faded-navigation',
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
