@@ -1,0 +1,23 @@
+{
+  "name": "@packages/kcf/homepage/feature-homepage",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "../../../../../dist/packages/kcf/homepage/feature-homepage/index.js",
+  "module": "../../../../../dist/packages/kcf/homepage/feature-homepage/index.js",
+  "types": "../../../../../dist/packages/kcf/homepage/feature-homepage/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "keryan-cazaban": "./src/index.ts",
+      "types": "../../../../../dist/packages/kcf/homepage/feature-homepage/index.d.ts",
+      "import": "../../../../../dist/packages/kcf/homepage/feature-homepage/index.js",
+      "default": "../../../../../dist/packages/kcf/homepage/feature-homepage/index.js"
+    }
+  },
+  "nx": {
+    "tags": [
+      "scope:kcf",
+      "type:feature"
+    ]
+  }
+}
