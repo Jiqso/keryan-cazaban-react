@@ -43,6 +43,9 @@
   "references": [
     {
       "path": "../../../kcf/utils/translation/tsconfig.lib.json"
+    },
+    {
+      "path": "../../utils/intl-helper/tsconfig.lib.json"
     }
   ]
 }
