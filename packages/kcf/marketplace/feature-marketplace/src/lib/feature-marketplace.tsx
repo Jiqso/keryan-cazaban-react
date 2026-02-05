@@ -244,7 +244,6 @@ export function FeatureMarketplace() {
     >
       <div className={styles['marketplace-content']}>
         <div className={styles['product-grid']}>
-          {/* Your product listings will go here */}
           {itemsTemplate.map((item, index) => (
             <MarketplaceCard
               key={index}
