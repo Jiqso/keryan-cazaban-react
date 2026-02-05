@@ -1,0 +1,23 @@
+{
+  "name": "@packages/shared/navigation/faded-navigation",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "../../../../../dist/packages/shared/navigation/faded-navigation/index.js",
+  "module": "../../../../../dist/packages/shared/navigation/faded-navigation/index.js",
+  "types": "../../../../../dist/packages/shared/navigation/faded-navigation/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "keryan-cazaban": "./src/index.ts",
+      "types": "../../../../../dist/packages/shared/navigation/faded-navigation/index.d.ts",
+      "import": "../../../../../dist/packages/shared/navigation/faded-navigation/index.js",
+      "default": "../../../../../dist/packages/shared/navigation/faded-navigation/index.js"
+    }
+  },
+  "nx": {
+    "tags": [
+      "scope:shared",
+      "type:ui"
+    ]
+  }
+}
