@@ -55,7 +55,7 @@ export function StickyNavigation({
           {/* Logo/Brand */}
           <div className={styles['brand']}>
             <span className={styles['brand-icon']}>🖨️</span>
-            <span className={styles['brand-text']}>3D Market</span>
+            <span className={styles['brand-text']}>Marketplace</span>
           </div>
 
           {/* Categories Dropdown */}
