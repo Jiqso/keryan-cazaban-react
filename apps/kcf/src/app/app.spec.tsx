@@ -1,6 +1,7 @@
 import { IntlHelper } from '@utils/intl-helper';
 import { IntlMessages } from '@utils/translation';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { BrowserRouter } from 'react-router-dom';
 import App from './app';
 
 describe('App', () => {
@@ -13,9 +14,11 @@ describe('App', () => {
       },
     });
     const { baseElement } = IntlHelper(
-      <QueryClientProvider client={queryClient}>
-        <App />
-      </QueryClientProvider>,
+      <BrowserRouter>
+        <QueryClientProvider client={queryClient}>
+          <App />
+        </QueryClientProvider>
+      </BrowserRouter>,
       'en',
       IntlMessages('en'),
     );

@@ -35,16 +35,19 @@
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx", "src/**/*.json"],
   "references": [
     {
-      "path": "../../packages/kcf/homepage/feature-homepage/tsconfig.lib.json"
+      "path": "../../packages/shared/utils/language-provider/tsconfig.lib.json"
     },
     {
       "path": "../../packages/kcf/marketplace/feature-marketplace/tsconfig.lib.json"
     },
     {
+      "path": "../../packages/kcf/homepage/feature-homepage/tsconfig.lib.json"
+    },
+    {
       "path": "../../packages/kcf/utils/translation/tsconfig.lib.json"
     },
     {
-      "path": "../../packages/shared/utils/language-provider/tsconfig.lib.json"
+      "path": "../../packages/shared/utils/intl-helper/tsconfig.lib.json"
     }
   ]
 }
