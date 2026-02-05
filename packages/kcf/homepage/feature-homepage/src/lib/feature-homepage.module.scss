@@ -215,16 +215,6 @@
 }
 
 /* Portfolio Section */
-.portfolio-grid {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  gap: 1.5rem;
-  // margin-top: 2rem;
-}
-
 .portfolio {
   display: flex;
   flex-direction: row;
@@ -238,6 +228,15 @@
     color: #666;
     font-size: 1.1rem;
     font-family: 'Quicksand', sans-serif;
+  }
+  &-grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 1.5rem;
+    // margin-top: 2rem;
   }
 }
 

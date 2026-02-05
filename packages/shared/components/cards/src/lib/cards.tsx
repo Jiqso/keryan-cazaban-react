@@ -23,14 +23,14 @@ export function PortfolioCard({
   const intl = useIntl();
 
   return (
-    <div className={styles['card']}>
+    <div className={styles['portfolio']}>
       {/* Company Name Header */}
-      <div className={styles['card-header']}>
+      <div className={styles['portfolio-header']}>
         <h3 className={styles['company-name']}>{companyName}</h3>
       </div>
 
       {/* Website Preview */}
-      <div className={styles['card-preview']}>
+      <div className={styles['portfolio-preview']}>
         {!imageError && previewImage ? (
           <img
             src={previewImage}
@@ -49,7 +49,7 @@ export function PortfolioCard({
 
       {/* Project Details */}
       {(websiteUrl || description || projectTitle) && (
-        <div className={styles['card-content']}>
+        <div className={styles['portfolio-content']}>
           <h4 className={styles['project-title']}>{projectTitle}</h4>
           {description && <p className={styles['description']}>{description}</p>}
 
@@ -78,6 +78,57 @@ export function PortfolioCard({
           )}
         </div>
       )}
+    </div>
+  );
+}
+
+export interface MarketplaceCardProps {
+  name: string;
+  image: string;
+  shortDescription: string;
+  price: number;
+  rating: number;
+  onClick: () => void;
+}
+
+export function MarketplaceCard({
+  name,
+  image,
+  shortDescription,
+  price,
+  rating,
+  onClick,
+}: MarketplaceCardProps) {
+  return (
+    <div className={styles['marketplace']} onClick={onClick}>
+      <span className={styles['marketplace-icon']} role="img" aria-label="Art">
+        {image}
+      </span>
+      <h3>{name}</h3>
+      <div className={styles['marketplace-details']}>
+        <p>{price} €</p>
+        <div className={styles['marketplace-rating']}>
+          {[1, 2, 3, 4, 5].map(star => (
+            <span
+              key={star}
+              className={
+                star <= Math.round(rating)
+                  ? rating > 3.5
+                    ? styles['star-good']
+                    : rating > 2
+                      ? styles['star-average']
+                      : styles['star-bad']
+                  : styles['star-empty']
+              }
+              aria-label={star <= Math.round(rating) ? 'Filled star' : 'Empty star'}
+              role="img"
+            >
+              ★
+            </span>
+          ))}
+          <span className={styles['marketplace-rating-value']}>{rating}</span>
+        </div>
+      </div>
     </div>
   );
 }
