@@ -15,24 +15,6 @@
       "path": "./apps/kcf"
     },
     {
-      "path": "./packages/kcf/navigation/faded-navigation"
-    },
-    {
-      "path": "./packages/kcf/utils/language-provider"
-    },
-    {
-      "path": "./packages/kcf/layout/feature-layout"
-    },
-    {
-      "path": "./packages/kcf/utils/intl-helper"
-    },
-    {
-      "path": "./packages/kcf/utils/translation"
-    },
-    {
-      "path": "./packages/kcf/components/cards"
-    },
-    {
       "path": "./apps/kcb-e2e"
     },
     {
@@ -40,6 +22,30 @@
     },
     {
       "path": "./packages/kcb/homepage"
+    },
+    {
+      "path": "./packages/kcf/homepage/feature-homepage"
+    },
+    {
+      "path": "./packages/kcf/marketplace/feature-marketplace"
+    },
+    {
+      "path": "./packages/shared/navigation/faded-navigation"
+    },
+    {
+      "path": "./packages/shared/utils/language-provider"
+    },
+    {
+      "path": "./packages/shared/utils/intl-helper"
+    },
+    {
+      "path": "./packages/shared/components/cards"
+    },
+    {
+      "path": "./packages/shared/navigation/sticky-navigation"
+    },
+    {
+      "path": "./packages/shared/utils/translation"
     }
   ]
 }
