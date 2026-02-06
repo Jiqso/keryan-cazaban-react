@@ -44,7 +44,7 @@
       "path": "../../packages/kcf/homepage/feature-homepage/tsconfig.lib.json"
     },
     {
-      "path": "../../packages/kcf/utils/translation/tsconfig.lib.json"
+      "path": "../../packages/shared/utils/translation/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shared/utils/intl-helper/tsconfig.lib.json"

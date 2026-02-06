@@ -15,9 +15,6 @@
       "path": "./apps/kcf"
     },
     {
-      "path": "./packages/kcf/utils/translation"
-    },
-    {
       "path": "./apps/kcb-e2e"
     },
     {
@@ -46,6 +43,9 @@
     },
     {
       "path": "./packages/shared/navigation/sticky-navigation"
+    },
+    {
+      "path": "./packages/shared/utils/translation"
     }
   ]
 }

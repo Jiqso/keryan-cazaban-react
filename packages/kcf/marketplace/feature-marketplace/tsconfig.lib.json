@@ -46,6 +46,12 @@
     },
     {
       "path": "../../../shared/navigation/sticky-navigation/tsconfig.lib.json"
+    },
+    {
+      "path": "../../../shared/utils/translation/tsconfig.lib.json"
+    },
+    {
+      "path": "../../../shared/utils/intl-helper/tsconfig.lib.json"
     }
   ]
 }
