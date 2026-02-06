@@ -1,11 +1,17 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import dts from 'vite-plugin-dts';
+import * as path from 'path';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig(() => ({
-  root: __dirname,
+  root: import.meta.dirname,
   cacheDir: '../../../../node_modules/.vite/packages/shared/components/cards',
-  plugins: [react(), nxViteTsPaths()],
+  plugins: [
+    react(),
+    nxViteTsPaths(),
+    dts({ entryRoot: 'src', tsconfigPath: path.join(import.meta.dirname, 'tsconfig.lib.json') }),
+  ],
   // Uncomment this if you are using workers.
   // worker: {
   //  plugins: [],
@@ -20,7 +26,7 @@ export default defineConfig(() => ({
     lib: {
       // Could also be a dictionary or array of multiple entry points.
       entry: 'src/index.ts',
-      name: 'cards',
+      name: 'packages/shared/components/cards',
       fileName: 'index',
       // Change this to the formats you want to support.
       // Don't forget to update your package.json as well.
@@ -32,7 +38,7 @@ export default defineConfig(() => ({
     },
   },
   test: {
-    name: 'cards',
+    name: 'packages/shared/components/cards',
     watch: false,
     globals: true,
     environment: 'jsdom',

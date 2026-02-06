@@ -1,10 +1,10 @@
-import { render } from '@testing-library/react';
+import FeatureMarketplace from './feature-marketplace';
+import { IntlHelper } from '@packages/shared/utils/intl-helper';
+import { IntlMessages } from '@packages/shared/utils/translation';
 
-import PackagesKcfMarketplaceFeatureMarketplace from './feature-marketplace';
-
-describe('PackagesKcfMarketplaceFeatureMarketplace', () => {
+describe('FeatureMarketplace', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<PackagesKcfMarketplaceFeatureMarketplace />);
+    const { baseElement } = IntlHelper(<FeatureMarketplace />, 'en', IntlMessages('en'));
     expect(baseElement).toBeTruthy();
   });
 });

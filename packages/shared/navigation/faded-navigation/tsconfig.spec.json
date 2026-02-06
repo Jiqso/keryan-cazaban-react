@@ -5,6 +5,7 @@
     "types": ["vitest/globals", "vitest/importMeta", "vite/client", "node", "vitest"],
     "jsx": "react-jsx"
   },
+  "files": ["src/index.ts"],
   "include": [
     "vite.config.ts",
     "vite.config.mts",
@@ -19,5 +20,10 @@
     "src/**/*.test.jsx",
     "src/**/*.spec.jsx",
     "src/**/*.d.ts"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.lib.json"
+    }
   ]
 }

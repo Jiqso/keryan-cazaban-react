@@ -1,6 +1,6 @@
 import FadedNavigation from './faded-navigation';
-import { IntlHelper } from '@utils/intl-helper';
-import { IntlMessages } from '@utils/translation';
+import { IntlHelper } from '@packages/shared/utils/intl-helper';
+import { IntlMessages } from '@packages/shared/utils/translation';
 
 describe('FadedNavigation', () => {
   it('should render successfully', () => {
