@@ -4,14 +4,14 @@ import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig(() => ({
   root: import.meta.dirname,
-  cacheDir: '../../../../../node_modules/.vite/packages/kcf/utils/translation',
+  cacheDir: '../../../../../node_modules/.vite/packages/shared/utils/translation',
   plugins: [react(), nxViteTsPaths()],
   // Uncomment this if you are using workers.
   // worker: {
   //  plugins: [],
   // },
   build: {
-    outDir: '../../../../dist/packages/kcf/utils/translation',
+    outDir: '../../../../dist/packages/shared/utils/translation',
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
