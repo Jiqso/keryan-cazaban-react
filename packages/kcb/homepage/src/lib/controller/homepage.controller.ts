@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { HomepageService } from '../services/homepage.service';
-import { ContactDto } from '../dto/homepage.dtoo';
+import { ContactDto } from '../dto/homepage.dto';
 
 @Controller('homepage')
 export class HomepageController {
