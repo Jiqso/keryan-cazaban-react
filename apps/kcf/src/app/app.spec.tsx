@@ -1,5 +1,5 @@
-import { IntlHelper } from '@utils/intl-helper';
-import { IntlMessages } from '@utils/translation';
+import { IntlHelper } from '@packages/shared/utils/intl-helper';
+import { IntlMessages } from '@packages/shared/utils/translation';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter } from 'react-router-dom';
 import App from './app';

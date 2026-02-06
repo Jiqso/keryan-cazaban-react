@@ -4,7 +4,7 @@ import App from './app/app';
 import { BrowserRouter } from 'react-router-dom';
 import { LanguageContext, LanguageProvider } from '@packages/shared/utils/language-provider';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { IntlMessages } from '@packages/kcf/utils/translation';
+import { IntlMessages } from '@packages/shared/utils/translation';
 
 const queryClient = new QueryClient();
 
