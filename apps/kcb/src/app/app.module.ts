@@ -3,7 +3,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MailerModule } from '@nestjs-modules/mailer';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { HomepageModule } from '@kcb/homepage';
+import { HomepageModule } from '@packages/kcb/homepage';
+import { MarketplaceModule } from '@packages/kcb/marketplace';
 
 @Module({
   imports: [
@@ -34,6 +35,7 @@ import { HomepageModule } from '@kcb/homepage';
       },
     }),
     HomepageModule,
+    MarketplaceModule,
   ],
   controllers: [AppController],
   providers: [AppService],
