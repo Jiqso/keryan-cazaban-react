@@ -30,6 +30,7 @@
       ],
       // Back-end packages
       "@packages/kcb/homepage": ["packages/kcb/homepage/src/index.ts"],
+      "@packages/kcb/marketplace": ["packages/kcb/marketplace/src/index.ts"],
 
       // Shared packages
       "@packages/shared/components/cards": ["packages/shared/components/cards/src/index.ts"],
