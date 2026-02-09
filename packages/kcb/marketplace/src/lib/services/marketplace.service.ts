@@ -8,5 +8,4 @@ export class MarketplaceService {
       message: 'Hi, welcome to the marketplace part of the api',
     };
   }
-
 }

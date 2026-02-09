@@ -68,7 +68,6 @@ export function FeatureHomepage() {
     },
   ];
 
-
   const portfolioItems = [
     {
       companyName: 'MyHobbyPlace',

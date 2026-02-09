@@ -5,7 +5,6 @@ import * as nodemailer from 'nodemailer';
 
 @Injectable()
 export class HomepageService {
-
   async sendEmail(contactDto: ContactDto): Promise<{ message: string }> {
     const { email, message, name } = contactDto;
 
