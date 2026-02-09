@@ -46,6 +46,9 @@
     },
     {
       "path": "./packages/shared/utils/translation"
+    },
+    {
+      "path": "./packages/kcb/marketplace"
     }
   ]
 }

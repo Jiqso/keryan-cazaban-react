@@ -16,6 +16,9 @@
   "references": [
     {
       "path": "../../packages/kcb/homepage/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/kcb/marketplace/tsconfig.lib.json"
     }
   ]
 }

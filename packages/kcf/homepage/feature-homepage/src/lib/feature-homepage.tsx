@@ -82,7 +82,7 @@ export function FeatureHomepage() {
       projectTitle: '',
       description: '',
       previewImage: '',
-      websiteUrl: `${import.meta.env.VITE_FRONTEND_URL}/marketplace`,
+      websiteUrl: `/marketplace`,
       tags: ['Marketplace', 'Template'],
     },
   ];

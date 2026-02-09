@@ -1,16 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { ContactDto } from '../dto/contact.dto';
+import { ContactDto } from '../dto/homepage.dto';
 import { google } from 'googleapis';
 import * as nodemailer from 'nodemailer';
 
 @Injectable()
 export class HomepageService {
-  getData(): { message: string } {
-    return {
-      message: 'Hi, welcome to the homepage part of the api',
-    };
-  }
-
   async sendEmail(contactDto: ContactDto): Promise<{ message: string }> {
     const { email, message, name } = contactDto;
 

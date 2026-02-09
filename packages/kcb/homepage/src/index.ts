@@ -1,1 +1,1 @@
-export * from './lib/module/homepage.module';
+export * from './lib/homepage.module';
