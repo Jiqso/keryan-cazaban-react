@@ -1,11 +1,11 @@
-import { Module } from '@nestjs/common';
+import { Module, MiddlewareConsumer, NestModule } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MailerModule } from '@nestjs-modules/mailer';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { HomepageModule } from '@packages/kcb/homepage';
 import { MarketplaceModule } from '@packages/kcb/marketplace';
-import { SpaFallbackController } from './spa-fallback.controller';
+import { SpaFallbackMiddleware } from './spa-fallback.controller';
 
 @Module({
   imports: [
@@ -38,7 +38,11 @@ import { SpaFallbackController } from './spa-fallback.controller';
     HomepageModule,
     MarketplaceModule,
   ],
-  controllers: [AppController, SpaFallbackController],
+  controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule implements NestModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer.apply(SpaFallbackMiddleware).forRoutes('*');
+  }
+}
