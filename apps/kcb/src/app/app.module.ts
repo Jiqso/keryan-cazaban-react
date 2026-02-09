@@ -1,11 +1,12 @@
-import { Module, MiddlewareConsumer, NestModule } from '@nestjs/common';
+import { Module } from '@nestjs/common';
+import { APP_FILTER } from '@nestjs/core';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MailerModule } from '@nestjs-modules/mailer';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { HomepageModule } from '@packages/kcb/homepage';
 import { MarketplaceModule } from '@packages/kcb/marketplace';
-import { SpaFallbackController } from './spa-fallback.controller';
+import { SpaFallbackFilter } from './spa-fallback.filter';
 
 @Module({
   imports: [
@@ -38,7 +39,13 @@ import { SpaFallbackController } from './spa-fallback.controller';
     HomepageModule,
     MarketplaceModule,
   ],
-  controllers: [AppController, SpaFallbackController],
-  providers: [AppService],
+  controllers: [AppController],
+  providers: [
+    AppService,
+    {
+      provide: APP_FILTER,
+      useClass: SpaFallbackFilter,
+    },
+  ],
 })
 export class AppModule {}
