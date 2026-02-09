@@ -6,8 +6,6 @@ import { MarketplaceDto } from '../dto/marketplace.dto';
 export class MarketplaceController {
   constructor(private readonly marketplaceService: MarketplaceService) {}
 
-  @Get()
-  getData() {
-    return this.marketplaceService.getData();
-  }
+  // Add your marketplace API endpoints here
+  // Example: @Get('products'), @Post('create'), etc.
 }

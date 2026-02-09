@@ -5,6 +5,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { HomepageModule } from '@packages/kcb/homepage';
 import { MarketplaceModule } from '@packages/kcb/marketplace';
+import { SpaFallbackController } from './spa-fallback.controller';
 
 @Module({
   imports: [
@@ -37,7 +38,7 @@ import { MarketplaceModule } from '@packages/kcb/marketplace';
     HomepageModule,
     MarketplaceModule,
   ],
-  controllers: [AppController],
+  controllers: [AppController, SpaFallbackController],
   providers: [AppService],
 })
 export class AppModule {}

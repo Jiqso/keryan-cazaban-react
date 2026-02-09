@@ -8,8 +8,10 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   const configService = app.get(ConfigService);
 
-  // Set global prefix for all API routes
-  app.setGlobalPrefix('api');
+  // Set global prefix for all API routes, excluding non-API routes
+  app.setGlobalPrefix('api', {
+    exclude: ['*'], // Exclude wildcard routes (SPA fallback)
+  });
 
   // Enable CORS
   app.enableCors({
@@ -23,7 +25,6 @@ async function bootstrap() {
   if (process.env['NX_HOST_ON_HEROKU'] === 'true') {
     const clientPath = path.resolve(__dirname, '../kcf/');
     app.useStaticAssets(clientPath);
-    await import('./app/spa-fallback.controller.ts');
   }
 
   await app.listen(port);
