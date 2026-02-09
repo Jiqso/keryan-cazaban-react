@@ -16,7 +16,7 @@ export function FeatureHomepage() {
       message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
     };
 
-    fetch(`${import.meta.env.VITE_BACKEND_URL}/homepage/contact`, {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/homepage/contact`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
