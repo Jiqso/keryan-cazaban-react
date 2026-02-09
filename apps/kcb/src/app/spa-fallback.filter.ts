@@ -20,7 +20,19 @@ export class SpaFallbackFilter implements ExceptionFilter {
     }
 
     // For all other 404s, try to serve index.html for SPA routing
-    const clientPath = path.resolve(__dirname, '../../kcf/index.html');
+    // Try multiple possible paths for built frontend
+    const possiblePaths = [
+      path.resolve(__dirname, '../../../dist/apps/kcf/index.html'), // Production build path
+      path.resolve(__dirname, '../../kcf/index.html'), // Development path
+    ];
+
+    let clientPath: string | null = null;
+    for (const p of possiblePaths) {
+      if (fs.existsSync(p)) {
+        clientPath = p;
+        break;
+      }
+    }
 
     // Check if the file exists before trying to serve it
     if (!fs.existsSync(clientPath)) {
