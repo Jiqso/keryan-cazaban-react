@@ -1,6 +1,7 @@
 import { ExceptionFilter, Catch, NotFoundException, ArgumentsHost } from '@nestjs/common';
 import type { Response } from 'express';
 import * as path from 'path';
+import * as fs from 'fs';
 
 @Catch(NotFoundException)
 export class SpaFallbackFilter implements ExceptionFilter {
@@ -18,8 +19,28 @@ export class SpaFallbackFilter implements ExceptionFilter {
       });
     }
 
-    // For all other 404s, serve index.html for SPA routing
+    // For all other 404s, try to serve index.html for SPA routing
     const clientPath = path.resolve(__dirname, '../../kcf/index.html');
-    response.sendFile(clientPath);
+
+    // Check if the file exists before trying to serve it
+    if (!fs.existsSync(clientPath)) {
+      // In development, when frontend is served separately
+      return response.status(404).json({
+        message: 'Frontend not built. Run: npx nx build kcf',
+        error: 'Not Found',
+        statusCode: 404,
+      });
+    }
+
+    response.sendFile(clientPath, err => {
+      if (err) {
+        console.error('Error serving SPA fallback:', err);
+        response.status(404).json({
+          message: 'SPA index.html not found',
+          error: 'Not Found',
+          statusCode: 404,
+        });
+      }
+    });
   }
 }
