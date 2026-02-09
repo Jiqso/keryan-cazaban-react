@@ -5,7 +5,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { HomepageModule } from '@packages/kcb/homepage';
 import { MarketplaceModule } from '@packages/kcb/marketplace';
-import { SpaFallbackMiddleware } from './spa-fallback.controller';
+import { SpaFallbackController } from './spa-fallback.controller';
 
 @Module({
   imports: [
@@ -38,11 +38,7 @@ import { SpaFallbackMiddleware } from './spa-fallback.controller';
     HomepageModule,
     MarketplaceModule,
   ],
-  controllers: [AppController],
+  controllers: [AppController, SpaFallbackController],
   providers: [AppService],
 })
-export class AppModule implements NestModule {
-  configure(consumer: MiddlewareConsumer) {
-    consumer.apply(SpaFallbackMiddleware).forRoutes('*');
-  }
-}
+export class AppModule {}

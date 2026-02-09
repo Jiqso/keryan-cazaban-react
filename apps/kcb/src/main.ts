@@ -8,9 +8,9 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   const configService = app.get(ConfigService);
 
-  // Set global prefix for all API routes, excluding non-API routes
+  // Set global prefix for all API routes, excluding SPA fallback
   app.setGlobalPrefix('api', {
-    exclude: ['*'], // Exclude wildcard routes (SPA fallback)
+    exclude: ['/'],
   });
 
   // Enable CORS
