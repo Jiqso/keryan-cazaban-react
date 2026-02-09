@@ -78,10 +78,10 @@ export function FeatureHomepage() {
       tags: ['Marketplace', 'CRM'],
     },
     {
-      companyName: 'Template',
+      companyName: 'Marketplace preview',
       projectTitle: '',
       description: '',
-      previewImage: '',
+      previewImage: '/websiteScreenshot/marketplace.png',
       websiteUrl: `/marketplace`,
       tags: ['Marketplace', 'Template'],
     },
