@@ -49,6 +49,9 @@
     },
     {
       "path": "./packages/kcb/marketplace"
+    },
+    {
+      "path": "./packages/shared/components/inputs"
     }
   ]
 }

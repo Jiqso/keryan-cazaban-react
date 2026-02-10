@@ -1,0 +1,21 @@
+.marketplace-login-input {
+  padding: 0.75rem 1.5rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: text;
+  transition: all 0.3s ease;
+
+  &::placeholder {
+    color: white;
+    font-weight: 500;
+  }
+
+  &:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  }
+}
