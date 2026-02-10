@@ -1,4 +1,27 @@
 {
+  "COMPONENTS": {
+    "CARDS": {
+      "PORTFOLIO": {
+        "PREVIEW_UNAVAILABLE": "Prévisualisation impossible",
+        "VISIT_WEBSITE": "Visiter le site"
+      }
+    },
+    "NAVIGATION": {
+      "STICKY_NAVIGATION": {
+        "TEXT": {
+          "ALREADY_HAVE_ACCOUNT": "Déja un compte ?",
+          "GET_DISCONNECTED": "Se déconnecter",
+          "LOGIN": "Se connecter",
+          "NO_ACCOUNT": "Pas de compte?",
+          "REGISTER": "Je crée un compte"
+        }
+      }
+    }
+  },
+  "INPUTS": {
+    "PSEUDO_EMAIL": "Pseudo/email",
+    "PASSWORD": "Mot de passe"
+  },
   "HOMEPAGE": {
     "HOME": {
       "ABOUT": {
@@ -49,12 +72,12 @@
       }
     }
   },
-  "COMPONENTS": {
-    "CARDS": {
-      "PORTFOLIO": {
-        "PREVIEW_UNAVAILABLE": "Prévisualisation impossible",
-        "VISIT_WEBSITE": "Visiter le site"
-      }
+  "SHARED": {
+    "FORM": {
+      "GET_LOGGED": "Se connecter",
+      "GET_REGISTERED": "S'enregistrer",
+      "LOGIN": "Connexion",
+      "REGISTER": "Créer un compte"
     }
   }
 }
