@@ -1,9 +1,10 @@
 import styles from './sticky-navigation.module.scss';
+import React from 'react';
+import { useIntl } from 'react-intl';
 import { MarketplaceLoginInput } from '@packages/shared/components/inputs';
 import { Dialog, MenuItem, Menu, IconButton } from '@mui/material';
 import { AccountCircle } from '@mui/icons-material';
 import { useState } from 'react';
-import React from 'react';
 
 interface StickyNavigationCategory {
   id: string;
@@ -34,6 +35,8 @@ export function StickyNavigation({
   hasLogin = false,
   children,
 }: StickyNavigationProps) {
+  const intl = useIntl();
+
   // const [searchQuery, setSearchQuery] = useState('');
   // const [isSearchExpanded, setIsSearchExpanded] = useState(false);
   // const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -53,17 +56,8 @@ export function StickyNavigation({
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Logging in with:', { pseudo, password });
     localStorage.setItem('marketplaceUser', JSON.stringify({ pseudo }));
     setLoginIsOpen(false);
-  };
-
-  const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
   };
   // const handleCategoryClick = (categoryId: string) => {
   //   setActiveCategory(activeCategory === categoryId ? null : categoryId);
@@ -212,61 +206,85 @@ export function StickyNavigation({
         >
           {loginOption ? (
             <form className={styles['login']} onSubmit={handleLogin}>
-              <h1>Connexion</h1>
+              <h1>
+                {intl.formatMessage({
+                  id: 'SHARED.FORM.LOGIN',
+                })}
+              </h1>
               <MarketplaceLoginInput
                 type="pseudo"
                 value={pseudo}
-                placeholder="Pseudo/email"
+                placeholder={intl.formatMessage({
+                  id: 'INPUTS.PSEUDO_EMAIL',
+                })}
                 setValue={setPseudo}
                 autoFocus
               />
               <MarketplaceLoginInput
                 type="password"
                 value={password}
-                placeholder="Password"
+                placeholder={intl.formatMessage({ id: 'INPUTS.PASSWORD' })}
                 setValue={setPassword}
               />
               <button type="submit" className={styles['login__button']}>
-                Login
+                {intl.formatMessage({
+                  id: 'SHARED.FORM.GET_LOGGED',
+                })}
               </button>
               <p>
-                Pas de compte ?{' '}
+                {intl.formatMessage({
+                  id: 'COMPONENTS.NAVIGATION.STICKY_NAVIGATION.TEXT.NO_ACCOUNT',
+                })}{' '}
                 <button
                   type="button"
                   onClick={() => setLoginOption(false)}
                   className={styles['login__link-button']}
                 >
-                  Je m'enregistre
+                  {intl.formatMessage({
+                    id: 'COMPONENTS.NAVIGATION.STICKY_NAVIGATION.TEXT.REGISTER',
+                  })}
                 </button>
               </p>
             </form>
           ) : (
             <form className={styles['login']} onSubmit={handleLogin}>
-              <h1>Création de compte</h1>
+              <h1>
+                {intl.formatMessage({
+                  id: 'SHARED.FORM.REGISTER',
+                })}
+              </h1>
               <MarketplaceLoginInput
                 type="pseudo"
                 value={pseudo}
-                placeholder="Pseudo/email"
+                placeholder={intl.formatMessage({
+                  id: 'INPUTS.PSEUDO_EMAIL',
+                })}
                 setValue={setPseudo}
                 autoFocus
               />
               <MarketplaceLoginInput
                 type="password"
                 value={password}
-                placeholder="Password"
+                placeholder={intl.formatMessage({ id: 'INPUTS.PASSWORD' })}
                 setValue={setPassword}
               />
               <button type="submit" className={styles['login__button']}>
-                S'enregistrer
+                {intl.formatMessage({
+                  id: 'SHARED.FORM.GET_REGISTERED',
+                })}
               </button>
               <p>
-                Déja un compte ?{' '}
+                {intl.formatMessage({
+                  id: 'COMPONENTS.NAVIGATION.STICKY_NAVIGATION.TEXT.ALREADY_HAVE_ACCOUNT',
+                })}{' '}
                 <button
                   type="button"
                   onClick={() => setLoginOption(true)}
                   className={styles['login__link-button']}
                 >
-                  Je me connecter
+                  {intl.formatMessage({
+                    id: 'COMPONENTS.NAVIGATION.STICKY_NAVIGATION.TEXT.LOGIN',
+                  })}
                 </button>
               </p>
             </form>
@@ -294,7 +312,9 @@ export function StickyNavigation({
               setAnchorEl(null);
             }}
           >
-            Se déconnecter
+            {intl.formatMessage({
+              id: 'COMPONENTS.NAVIGATION.STICKY_NAVIGATION.TEXT.GET_DISCONNECTED',
+            })}
           </MenuItem>
         </Menu>
       )}
