@@ -241,6 +241,7 @@ export function FeatureMarketplace() {
       onCategorySelect={handleCategorySelect}
       cartItemCount={3}
       onCartClick={handleCartClick}
+      hasLogin={true}
     >
       <div className={styles['marketplace-content']}>
         <div className={styles['product-grid']}>
