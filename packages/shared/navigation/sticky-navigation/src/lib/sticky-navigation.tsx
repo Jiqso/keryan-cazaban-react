@@ -153,15 +153,37 @@ export function StickyNavigation({
             {localStorage.getItem('marketplaceUser') ? (
               <IconButton
                 onClick={event => {
-                  setAnchorEl(event.currentTarget);
+                  setAnchorEl(event.currentTarget as HTMLElement);
+                }}
+                sx={{
+                  height: '40px',
+                  width: '40px',
                 }}
               >
                 <AccountCircle
-                  className={`${styles['account-btn__connected']} ${styles['account-btn']}`}
+                  sx={{
+                    height: '30px',
+                    width: '30px',
+                    color: 'green',
+                  }}
                 />
               </IconButton>
             ) : (
-              <AccountCircle className={styles['account-btn']} onClick={handleProfileClick} />
+              <IconButton
+                onClick={handleProfileClick}
+                sx={{
+                  height: '40px',
+                  width: '40px',
+                }}
+              >
+                <AccountCircle
+                  sx={{
+                    height: '30px',
+                    width: '30px',
+                    color: 'red',
+                  }}
+                />
+              </IconButton>
             )}
           </div>
         </div>
