@@ -189,8 +189,8 @@
   border: 2px solid rgba(102, 126, 234, 0.1);
 
   &:hover {
-    transform: scale(1.05);
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1.1);
+    transition: all ease-in-out 0.2s;
     box-shadow:
       0 20px 60px rgba(102, 126, 234, 0.25),
       0 0 0 1px rgba(102, 126, 234, 0.3),
