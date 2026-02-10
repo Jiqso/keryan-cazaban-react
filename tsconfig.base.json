@@ -34,6 +34,7 @@
 
       // Shared packages
       "@packages/shared/components/cards": ["packages/shared/components/cards/src/index.ts"],
+      "@packages/shared/components/inputs": ["packages/shared/components/inputs/src/index.ts"],
       "@packages/shared/navigation/faded-navigation": [
         "packages/shared/navigation/faded-navigation/src/index.ts"
       ],
