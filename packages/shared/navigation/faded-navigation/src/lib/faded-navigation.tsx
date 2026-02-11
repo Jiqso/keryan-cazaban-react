@@ -1,5 +1,6 @@
 import styles from './faded-navigation.module.scss';
 import { useEffect, useState } from 'react';
+import { LanguageSelectInput } from '@packages/shared/components/inputs';
 
 interface FadedNavigationItem {
   id: string;
@@ -96,6 +97,7 @@ export function FadedNavigation({ items, children }: FadedNavigationProps) {
             </a>
           ))}
         </div>
+        <LanguageSelectInput />
       </nav>
 
       {/* Side Navigation Tree */}
@@ -143,6 +145,7 @@ export function FadedNavigation({ items, children }: FadedNavigationProps) {
             </div>
           ))}
         </nav>
+        <LanguageSelectInput />
       </aside>
 
       {/* Main Content Area */}

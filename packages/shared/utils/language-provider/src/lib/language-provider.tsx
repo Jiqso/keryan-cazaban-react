@@ -1,6 +1,6 @@
 import React, { PropsWithChildren, createContext, useState } from 'react';
 import { IntlProvider } from 'react-intl';
-// import { IntlMessages } from '@utils/translation';
+import { IntlMessages } from '@packages/shared/utils/translation';
 
 interface LanguageContextProps {
   language: 'fr' | 'en';
@@ -27,7 +27,7 @@ export const LanguageProvider: React.FC<PropsWithChildren<LanguageContextProps>>
 
   return (
     <LanguageContext.Provider value={{ language, handleLanguageChange, messages }}>
-      <IntlProvider locale={language} messages={messages}>
+      <IntlProvider locale={language} messages={IntlMessages(language)}>
         {children}
       </IntlProvider>
     </LanguageContext.Provider>

@@ -19,3 +19,9 @@
     box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
   }
 }
+
+.language-select {
+  &__menu-item {
+    width: 60px;
+  }
+}

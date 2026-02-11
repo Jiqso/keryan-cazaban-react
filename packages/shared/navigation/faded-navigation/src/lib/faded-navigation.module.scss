@@ -31,9 +31,10 @@
   }
   &-content {
     display: flex;
+    align-items: center;
     gap: 2rem;
     padding: 1rem 2rem;
-    width: 100vw;
+    height: 60px;
     margin: 0 auto;
     font-family: 'Quicksand', sans-serif;
   }
@@ -78,14 +79,24 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-right: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   &.visible {
     transform: translateX(0);
     transition: transform 0.3s ease-in-out;
     opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
   }
   &-content {
     padding: 2rem 1.5rem;
     padding-top: 4rem;
+    width: 75%;
   }
   &-child-link {
     display: block;
@@ -231,6 +242,10 @@
   }
 
   .top-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
     &-content {
       display: none;
     }
@@ -245,11 +260,11 @@
     width: 280px;
     z-index: 1001;
     top: 50px;
+    height: calc(100% - 50px);
 
     &.mobile-open {
       transform: translateX(0);
       opacity: 0.95;
-      top: 50px;
     }
 
     // Keep side nav visible on scroll for mobile
