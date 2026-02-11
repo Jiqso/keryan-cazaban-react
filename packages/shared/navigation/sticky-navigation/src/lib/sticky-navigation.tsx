@@ -5,6 +5,7 @@ import { MarketplaceLoginInput } from '@packages/shared/components/inputs';
 import { Dialog, MenuItem, Menu, IconButton } from '@mui/material';
 import { AccountCircle } from '@mui/icons-material';
 import { useState } from 'react';
+import { LanguageSelectInput } from '@packages/shared/components/inputs';
 
 interface StickyNavigationCategory {
   id: string;
@@ -145,39 +146,45 @@ export function StickyNavigation({
               {cartItemCount > 0 && <span className={styles['cart-badge']}>{cartItemCount}</span>}
             </button> */}
             {localStorage.getItem('marketplaceUser') ? (
-              <IconButton
-                onClick={event => {
-                  setAnchorEl(event.currentTarget as HTMLElement);
-                }}
-                sx={{
-                  height: '40px',
-                  width: '40px',
-                }}
-              >
-                <AccountCircle
-                  sx={{
-                    height: '30px',
-                    width: '30px',
-                    color: 'green',
+              <>
+                <LanguageSelectInput />
+                <IconButton
+                  onClick={event => {
+                    setAnchorEl(event.currentTarget as HTMLElement);
                   }}
-                />
-              </IconButton>
+                  sx={{
+                    height: '40px',
+                    width: '40px',
+                  }}
+                >
+                  <AccountCircle
+                    sx={{
+                      height: '30px',
+                      width: '30px',
+                      color: 'green',
+                    }}
+                  />
+                </IconButton>
+              </>
             ) : (
-              <IconButton
-                onClick={handleProfileClick}
-                sx={{
-                  height: '40px',
-                  width: '40px',
-                }}
-              >
-                <AccountCircle
+              <>
+                <LanguageSelectInput />
+                <IconButton
+                  onClick={handleProfileClick}
                   sx={{
-                    height: '30px',
-                    width: '30px',
-                    color: 'red',
+                    height: '40px',
+                    width: '40px',
                   }}
-                />
-              </IconButton>
+                >
+                  <AccountCircle
+                    sx={{
+                      height: '30px',
+                      width: '30px',
+                      color: 'red',
+                    }}
+                  />
+                </IconButton>
+              </>
             )}
           </div>
         </div>
