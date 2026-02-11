@@ -1,4 +1,27 @@
 {
+  "COMPONENTS": {
+    "CARDS": {
+      "PORTFOLIO": {
+        "PREVIEW_UNAVAILABLE": "Preview unavailable",
+        "VISIT_WEBSITE": "Visit Website"
+      }
+    },
+    "NAVIGATION": {
+      "STICKY_NAVIGATION": {
+        "TEXT": {
+          "ALREADY_HAVE_ACCOUNT": "Already got an account ?",
+          "GET_DISCONNECTED": "Log out",
+          "LOGIN": "Log in",
+          "NO_ACCOUNT": "No account?",
+          "REGISTER": "Create an account"
+        }
+      }
+    }
+  },
+  "INPUTS": {
+    "PSEUDO_EMAIL": "Pseudo/email",
+    "PASSWORD": "Password"
+  },
   "HOMEPAGE": {
     "HOME": {
       "ABOUT": {
@@ -49,12 +72,12 @@
       }
     }
   },
-  "COMPONENTS": {
-    "CARDS": {
-      "PORTFOLIO": {
-        "PREVIEW_UNAVAILABLE": "Preview unavailable",
-        "VISIT_WEBSITE": "Visit Website"
-      }
+  "SHARED": {
+    "FORM": {
+      "GET_LOGGED": "Log in",
+      "GET_REGISTERED": "Register",
+      "LOGIN": "Login",
+      "REGISTER": "Create an account"
     }
   }
 }

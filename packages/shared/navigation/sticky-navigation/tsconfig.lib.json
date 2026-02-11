@@ -43,6 +43,12 @@
   "references": [
     {
       "path": "../../components/inputs/tsconfig.lib.json"
+    },
+    {
+      "path": "../../utils/translation/tsconfig.lib.json"
+    },
+    {
+      "path": "../../utils/intl-helper/tsconfig.lib.json"
     }
   ]
 }
