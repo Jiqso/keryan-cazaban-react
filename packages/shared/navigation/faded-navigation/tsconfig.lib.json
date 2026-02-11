@@ -46,6 +46,9 @@
     },
     {
       "path": "../../utils/intl-helper/tsconfig.lib.json"
+    },
+    {
+      "path": "../../components/inputs/tsconfig.lib.json"
     }
   ]
 }
