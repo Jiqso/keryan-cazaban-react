@@ -21,6 +21,10 @@
                 "onlyDependOnLibsWithTags": ["scope:shared", "scope:kcf"]
               },
               {
+                "sourceTag": "scope:kcf-mobile",
+                "onlyDependOnLibsWithTags": ["scope:shared", "scope:kcf-mobile"]
+              },
+              {
                 "sourceTag": "scope:kcb",
                 "onlyDependOnLibsWithTags": ["scope:shared", "scope:kcb"]
               },

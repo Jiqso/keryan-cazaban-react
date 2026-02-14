@@ -52,6 +52,9 @@
     },
     {
       "path": "./packages/shared/components/inputs"
+    },
+    {
+      "path": "./apps/kcf-mobile"
     }
   ]
 }
