@@ -38,10 +38,19 @@
       "path": "../../packages/shared/utils/language-provider/tsconfig.lib.json"
     },
     {
-      "path": "../../packages/kcf/marketplace/feature-marketplace/tsconfig.lib.json"
+      "path": "../../packages/shared/navigation/sticky-navigation/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/shared/navigation/faded-navigation/tsconfig.lib.json"
     },
     {
       "path": "../../packages/kcf/homepage/feature-homepage/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/kcf/marketplace/feature-product/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/kcf/marketplace/feature-marketplace/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shared/utils/translation/tsconfig.lib.json"
