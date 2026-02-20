@@ -45,9 +45,6 @@
       "path": "../../../shared/components/cards/tsconfig.lib.json"
     },
     {
-      "path": "../../../shared/navigation/faded-navigation/tsconfig.lib.json"
-    },
-    {
       "path": "../../../shared/utils/translation/tsconfig.lib.json"
     },
     {

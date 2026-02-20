@@ -185,6 +185,8 @@ export function FeatureHomepage() {
             </h3>
             <ul>
               <li>Node.js</li>
+              <li>Express, Nest.js</li>
+              <li>MySQL</li>
               <li>REST APIs</li>
               <li>
                 {intl.formatMessage({
