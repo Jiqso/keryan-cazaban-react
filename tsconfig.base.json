@@ -28,6 +28,9 @@
       "@packages/kcf/marketplace/feature-marketplace": [
         "packages/kcf/marketplace/feature-marketplace/src/index.ts"
       ],
+      "@packages/kcf/marketplace/feature-product": [
+        "packages/kcf/marketplace/feature-product/src/index.ts"
+      ],
       // Back-end packages
       "@packages/kcb/homepage": ["packages/kcb/homepage/src/index.ts"],
       "@packages/kcb/marketplace": ["packages/kcb/marketplace/src/index.ts"],

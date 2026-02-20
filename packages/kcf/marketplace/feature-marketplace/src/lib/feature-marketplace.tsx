@@ -1,92 +1,7 @@
 import styles from './feature-marketplace.module.scss';
-import { StickyNavigation } from '@packages/shared/navigation/sticky-navigation';
 import { MarketplaceCard } from '@packages/shared/components/cards';
 
 export function FeatureMarketplace() {
-  const categories = [
-    {
-      id: 'miniatures',
-      label: 'Miniatures & Figures',
-      icon: '🎮',
-      subcategories: [
-        { id: 'fantasy', label: 'Fantasy Characters' },
-        { id: 'scifi', label: 'Sci-Fi Models' },
-        { id: 'vehicles', label: 'Vehicles & Mechs' },
-        { id: 'terrain', label: 'Terrain & Scenery' },
-      ],
-    },
-    {
-      id: 'functional',
-      label: 'Functional Parts',
-      icon: '🔧',
-      subcategories: [
-        { id: 'tools', label: 'Tools & Accessories' },
-        { id: 'replacement', label: 'Replacement Parts' },
-        { id: 'organizers', label: 'Organizers & Storage' },
-        { id: 'gadgets', label: 'Gadgets & Holders' },
-      ],
-    },
-    {
-      id: 'art',
-      label: 'Art & Decoration',
-      icon: '🎨',
-      subcategories: [
-        { id: 'sculptures', label: 'Sculptures' },
-        { id: 'vases', label: 'Vases & Planters' },
-        { id: 'wall-art', label: 'Wall Art' },
-        { id: 'lighting', label: 'Lighting & Lamps' },
-      ],
-    },
-    {
-      id: 'jewelry',
-      label: 'Jewelry & Fashion',
-      icon: '💍',
-      subcategories: [
-        { id: 'rings', label: 'Rings' },
-        { id: 'pendants', label: 'Pendants & Necklaces' },
-        { id: 'earrings', label: 'Earrings' },
-        { id: 'accessories', label: 'Accessories' },
-      ],
-    },
-    {
-      id: 'toys',
-      label: 'Toys & Games',
-      icon: '🧸',
-      subcategories: [
-        { id: 'puzzles', label: 'Puzzles' },
-        { id: 'board-games', label: 'Board Game Pieces' },
-        { id: 'action-figures', label: 'Action Figures' },
-        { id: 'educational', label: 'Educational Toys' },
-      ],
-    },
-    {
-      id: 'tech',
-      label: 'Tech & Electronics',
-      icon: '💻',
-      subcategories: [
-        { id: 'cases', label: 'Cases & Enclosures' },
-        { id: 'mounts', label: 'Mounts & Stands' },
-        { id: 'cables', label: 'Cable Management' },
-        { id: 'cooling', label: 'Cooling Solutions' },
-      ],
-    },
-  ];
-
-  const handleSearch = (query: string) => {
-    console.log('Searching for:', query);
-    // Implement your search logic here
-  };
-
-  const handleCategorySelect = (categoryId: string) => {
-    console.log('Selected category:', categoryId);
-    // Implement your category filtering logic here
-  };
-
-  const handleCartClick = () => {
-    console.log('Cart clicked');
-    // Implement your cart navigation logic here
-  };
-
   const itemsTemplate = [
     {
       name: 'Product 1',
@@ -235,30 +150,21 @@ export function FeatureMarketplace() {
   ];
 
   return (
-    <StickyNavigation
-      categories={categories}
-      onSearch={handleSearch}
-      onCategorySelect={handleCategorySelect}
-      cartItemCount={3}
-      onCartClick={handleCartClick}
-      hasLogin={true}
-    >
-      <div className={styles['marketplace-content']}>
-        <div className={styles['product-grid']}>
-          {itemsTemplate.map((item, index) => (
-            <MarketplaceCard
-              key={index}
-              name={item.name}
-              image={item.image}
-              shortDescription={item.shortDescription}
-              price={item.price}
-              rating={item.rating}
-              onClick={item.onClick}
-            />
-          ))}
-        </div>
+    <div className={styles['marketplace-content']}>
+      <div className={styles['product-grid']}>
+        {itemsTemplate.map((item, index) => (
+          <MarketplaceCard
+            key={index}
+            name={item.name}
+            image={item.image}
+            shortDescription={item.shortDescription}
+            price={item.price}
+            rating={item.rating}
+            onClick={item.onClick}
+          />
+        ))}
       </div>
-    </StickyNavigation>
+    </div>
   );
 }
 
