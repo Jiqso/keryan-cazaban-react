@@ -1,7 +1,13 @@
 import styles from './feature-marketplace.module.scss';
 import { MarketplaceCard } from '@packages/shared/components/cards';
+import { useNavigate } from 'react-router-dom';
 
 export function FeatureMarketplace() {
+  const navigate = useNavigate();
+
+  function handleCardClick(productId: number) {
+    navigate(`/marketplace/${productId}`);
+  }
   const itemsTemplate = [
     {
       name: 'Product 1',
@@ -9,7 +15,9 @@ export function FeatureMarketplace() {
       shortDescription: 'Amazing 3D print',
       price: 19.99,
       rating: 4.5,
-      onClick: () => console.log('Clicked Product 1'),
+      onClick: () => {
+        handleCardClick(1);
+      },
     },
     {
       name: 'Product 2',
@@ -17,7 +25,9 @@ export function FeatureMarketplace() {
       shortDescription: 'Functional part',
       price: 14.99,
       rating: 4.2,
-      onClick: () => console.log('Clicked Product 2'),
+      onClick: () => {
+        handleCardClick(2);
+      },
     },
     {
       name: 'Product 3',
@@ -25,7 +35,9 @@ export function FeatureMarketplace() {
       shortDescription: 'Gaming accessory',
       price: 29.99,
       rating: 3.2,
-      onClick: () => console.log('Clicked Product 3'),
+      onClick: () => {
+        handleCardClick(3);
+      },
     },
     {
       name: 'Product 4',
@@ -33,7 +45,9 @@ export function FeatureMarketplace() {
       shortDescription: 'Stylish jewelry',
       price: 24.99,
       rating: 4.3,
-      onClick: () => console.log('Clicked Product 4'),
+      onClick: () => {
+        handleCardClick(4);
+      },
     },
     {
       name: 'Product 5',
@@ -41,7 +55,9 @@ export function FeatureMarketplace() {
       shortDescription: 'Fun toy',
       price: 9.99,
       rating: 4.0,
-      onClick: () => console.log('Clicked Product 5'),
+      onClick: () => {
+        handleCardClick(5);
+      },
     },
     {
       name: 'Product 6',
@@ -49,7 +65,9 @@ export function FeatureMarketplace() {
       shortDescription: 'Tech gadget',
       price: 39.99,
       rating: 1.2,
-      onClick: () => console.log('Clicked Product 6'),
+      onClick: () => {
+        handleCardClick(6);
+      },
     },
     {
       name: 'Product 7',
@@ -57,7 +75,9 @@ export function FeatureMarketplace() {
       shortDescription: 'Artistic piece',
       price: 22.99,
       rating: 3.7,
-      onClick: () => console.log('Clicked Product 7'),
+      onClick: () => {
+        handleCardClick(1);
+      },
     },
     {
       name: 'Product 8',
@@ -65,7 +85,9 @@ export function FeatureMarketplace() {
       shortDescription: 'Useful tool',
       price: 12.99,
       rating: 4.1,
-      onClick: () => console.log('Clicked Product 8'),
+      onClick: () => {
+        handleCardClick(2);
+      },
     },
     {
       name: 'Product 9',
@@ -73,7 +95,9 @@ export function FeatureMarketplace() {
       shortDescription: 'Game accessory',
       price: 27.99,
       rating: 0.5,
-      onClick: () => console.log('Clicked Product 9'),
+      onClick: () => {
+        handleCardClick(3);
+      },
     },
     {
       name: 'Product 10',
@@ -81,7 +105,9 @@ export function FeatureMarketplace() {
       shortDescription: 'Elegant jewelry',
       price: 34.99,
       rating: 4.5,
-      onClick: () => console.log('Clicked Product 10'),
+      onClick: () => {
+        handleCardClick(4);
+      },
     },
     {
       name: 'Product 11',
@@ -89,7 +115,9 @@ export function FeatureMarketplace() {
       shortDescription: 'Educational toy',
       price: 19.99,
       rating: 2.8,
-      onClick: () => console.log('Clicked Product 11'),
+      onClick: () => {
+        handleCardClick(5);
+      },
     },
     {
       name: 'Product 12',
@@ -97,7 +125,9 @@ export function FeatureMarketplace() {
       shortDescription: 'Electronic accessory',
       price: 44.99,
       rating: 4.7,
-      onClick: () => console.log('Clicked Product 12'),
+      onClick: () => {
+        handleCardClick(6);
+      },
     },
     {
       name: 'Product 13',
@@ -105,7 +135,9 @@ export function FeatureMarketplace() {
       shortDescription: 'Creative sculpture',
       price: 26.99,
       rating: 4.3,
-      onClick: () => console.log('Clicked Product 13'),
+      onClick: () => {
+        handleCardClick(1);
+      },
     },
     {
       name: 'Product 14',
@@ -113,7 +145,9 @@ export function FeatureMarketplace() {
       shortDescription: 'Handy tool',
       price: 15.99,
       rating: 1,
-      onClick: () => console.log('Clicked Product 14'),
+      onClick: () => {
+        handleCardClick(2);
+      },
     },
     {
       name: 'Product 15',
@@ -121,7 +155,9 @@ export function FeatureMarketplace() {
       shortDescription: 'Gaming figure',
       price: 31.99,
       rating: 1.78,
-      onClick: () => console.log('Clicked Product 15'),
+      onClick: () => {
+        handleCardClick(3);
+      },
     },
     {
       name: 'Product 16',
@@ -129,7 +165,9 @@ export function FeatureMarketplace() {
       shortDescription: 'Chic pendant',
       price: 28.99,
       rating: 3.7,
-      onClick: () => console.log('Clicked Product 16'),
+      onClick: () => {
+        handleCardClick(4);
+      },
     },
     {
       name: 'Product 17',
@@ -137,7 +175,9 @@ export function FeatureMarketplace() {
       shortDescription: 'Fun puzzle',
       price: 14.99,
       rating: 2.4,
-      onClick: () => console.log('Clicked Product 17'),
+      onClick: () => {
+        handleCardClick(5);
+      },
     },
     {
       name: 'Product 18',
@@ -145,7 +185,9 @@ export function FeatureMarketplace() {
       shortDescription: 'Tech mount',
       price: 37.99,
       rating: 2.4,
-      onClick: () => console.log('Clicked Product 18'),
+      onClick: () => {
+        handleCardClick(6);
+      },
     },
   ];
 
