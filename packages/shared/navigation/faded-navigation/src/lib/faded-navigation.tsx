@@ -1,6 +1,7 @@
 import styles from './faded-navigation.module.scss';
 import { useEffect, useState } from 'react';
 import { LanguageSelectInput } from '@packages/shared/components/inputs';
+import { Outlet } from 'react-router-dom';
 
 interface FadedNavigationItem {
   id: string;
@@ -10,10 +11,15 @@ interface FadedNavigationItem {
 }
 
 interface FadedNavigationProps {
-  items: FadedNavigationItem[];
-  children?: React.ReactNode;
+  items?: FadedNavigationItem[];
 }
-export function FadedNavigation({ items, children }: FadedNavigationProps) {
+
+type OutletContext = {
+  setNavigationItems: (items: FadedNavigationItem[]) => void;
+};
+
+export function FadedNavigation({ items: propItems }: FadedNavigationProps) {
+  const [items, setItems] = useState<FadedNavigationItem[]>(propItems ?? []);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string>('');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -150,7 +156,7 @@ export function FadedNavigation({ items, children }: FadedNavigationProps) {
 
       {/* Main Content Area */}
       <main className={`${styles['content']} ${isScrolled ? styles['content-shifted'] : ''}`}>
-        {children}
+        <Outlet context={{ setNavigationItems: setItems } satisfies OutletContext} />
       </main>
     </>
   );
