@@ -1,22 +1,23 @@
 {
-  "name": "feature-product",
+  "name": "@marketplace/feature-product",
   "version": "0.0.1",
   "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "../../../../../dist/packages/kcf/marketplace/feature-product/index.js",
+  "module": "../../../../../dist/packages/kcf/marketplace/feature-product/index.js",
+  "types": "../../../../../dist/packages/kcf/marketplace/feature-product/index.d.ts",
   "exports": {
     "./package.json": "./package.json",
     ".": {
       "keryan-cazaban": "./src/index.ts",
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "default": "./dist/index.js"
+      "types": "../../../../../dist/packages/kcf/marketplace/feature-product/index.d.ts",
+      "import": "../../../../../dist/packages/kcf/marketplace/feature-product/index.js",
+      "default": "../../../../../dist/packages/kcf/marketplace/feature-product/index.js"
     }
   },
   "nx": {
     "tags": [
-      "scope:kcf type:feature"
+      "scope:kcf",
+      "type:feature"
     ]
   }
 }
