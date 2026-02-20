@@ -6,7 +6,7 @@ import { Dialog, MenuItem, Menu, IconButton } from '@mui/material';
 import { AccountCircle } from '@mui/icons-material';
 import { useState } from 'react';
 import { LanguageSelectInput } from '@packages/shared/components/inputs';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 interface StickyNavigationCategory {
   id: string;
@@ -24,6 +24,7 @@ interface StickyNavigationProps {
 
 export function StickyNavigation({ children }: StickyNavigationProps) {
   const intl = useIntl();
+  const navigate = useNavigate();
 
   // const [searchQuery, setSearchQuery] = useState('');
   // const [isSearchExpanded, setIsSearchExpanded] = useState(false);
@@ -147,7 +148,7 @@ export function StickyNavigation({ children }: StickyNavigationProps) {
       <nav className={styles['navbar']}>
         <div className={styles['navbar-content']}>
           {/* Logo/Brand */}
-          <div className={styles['brand']}>
+          <div className={styles['brand']} onClick={() => navigate('/marketplace')}>
             <span className={styles['brand-icon']}>🖨️</span>
             <span className={styles['brand-text']}>Marketplace</span>
           </div>

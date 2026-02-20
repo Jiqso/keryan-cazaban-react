@@ -13,7 +13,7 @@ export function App() {
       </Route>
       <Route path="/marketplace" element={<StickyNavigation />}>
         <Route index element={<FeatureMarketplace />} />
-        <Route path=":uuid" element={<FeatureProduct />} />
+        <Route path=":id" element={<FeatureProduct />} />
       </Route>
     </Routes>
   );
