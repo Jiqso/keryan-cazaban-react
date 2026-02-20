@@ -15,19 +15,18 @@ export const LanguageContext = createContext<LanguageContextProps>({
   handleLanguageChange: () => {},
 });
 
-export const LanguageProvider: React.FC<PropsWithChildren<LanguageContextProps>> = ({
-  children,
-  messages,
-}) => {
+export const LanguageProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [language, setLanguage] = useState<'fr' | 'en'>('fr');
 
   const handleLanguageChange = (newLanguage: 'fr' | 'en') => {
     setLanguage(newLanguage);
   };
 
+  const messages = IntlMessages(language);
+
   return (
     <LanguageContext.Provider value={{ language, handleLanguageChange, messages }}>
-      <IntlProvider locale={language} messages={IntlMessages(language)}>
+      <IntlProvider locale={language} messages={messages}>
         {children}
       </IntlProvider>
     </LanguageContext.Provider>
