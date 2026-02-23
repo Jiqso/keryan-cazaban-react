@@ -6,6 +6,7 @@ import { Dialog, MenuItem, Menu, IconButton } from '@mui/material';
 import { AccountCircle } from '@mui/icons-material';
 import { useState } from 'react';
 import { LanguageSelectInput } from '@packages/shared/components/inputs';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 interface StickyNavigationCategory {
   id: string;
@@ -18,25 +19,12 @@ interface StickyNavigationCategory {
 }
 
 interface StickyNavigationProps {
-  categories?: StickyNavigationCategory[];
-  onSearch?: (query: string) => void;
-  onCategorySelect?: (categoryId: string) => void;
-  cartItemCount?: number;
-  onCartClick?: () => void;
-  hasLogin?: boolean;
   children?: React.ReactNode;
 }
 
-export function StickyNavigation({
-  categories = [],
-  onSearch,
-  onCategorySelect,
-  cartItemCount = 0,
-  onCartClick,
-  hasLogin = false,
-  children,
-}: StickyNavigationProps) {
+export function StickyNavigation({ children }: StickyNavigationProps) {
   const intl = useIntl();
+  const navigate = useNavigate();
 
   // const [searchQuery, setSearchQuery] = useState('');
   // const [isSearchExpanded, setIsSearchExpanded] = useState(false);
@@ -53,7 +41,91 @@ export function StickyNavigation({
   //   if (onSearch) {
   //     onSearch(searchQuery);
   //   }
-  // };
+  // };*
+
+  const categories = [
+    {
+      id: 'miniatures',
+      label: 'Miniatures & Figures',
+      icon: '🎮',
+      subcategories: [
+        { id: 'fantasy', label: 'Fantasy Characters' },
+        { id: 'scifi', label: 'Sci-Fi Models' },
+        { id: 'vehicles', label: 'Vehicles & Mechs' },
+        { id: 'terrain', label: 'Terrain & Scenery' },
+      ],
+    },
+    {
+      id: 'functional',
+      label: 'Functional Parts',
+      icon: '🔧',
+      subcategories: [
+        { id: 'tools', label: 'Tools & Accessories' },
+        { id: 'replacement', label: 'Replacement Parts' },
+        { id: 'organizers', label: 'Organizers & Storage' },
+        { id: 'gadgets', label: 'Gadgets & Holders' },
+      ],
+    },
+    {
+      id: 'art',
+      label: 'Art & Decoration',
+      icon: '🎨',
+      subcategories: [
+        { id: 'sculptures', label: 'Sculptures' },
+        { id: 'vases', label: 'Vases & Planters' },
+        { id: 'wall-art', label: 'Wall Art' },
+        { id: 'lighting', label: 'Lighting & Lamps' },
+      ],
+    },
+    {
+      id: 'jewelry',
+      label: 'Jewelry & Fashion',
+      icon: '💍',
+      subcategories: [
+        { id: 'rings', label: 'Rings' },
+        { id: 'pendants', label: 'Pendants & Necklaces' },
+        { id: 'earrings', label: 'Earrings' },
+        { id: 'accessories', label: 'Accessories' },
+      ],
+    },
+    {
+      id: 'toys',
+      label: 'Toys & Games',
+      icon: '🧸',
+      subcategories: [
+        { id: 'puzzles', label: 'Puzzles' },
+        { id: 'board-games', label: 'Board Game Pieces' },
+        { id: 'action-figures', label: 'Action Figures' },
+        { id: 'educational', label: 'Educational Toys' },
+      ],
+    },
+    {
+      id: 'tech',
+      label: 'Tech & Electronics',
+      icon: '💻',
+      subcategories: [
+        { id: 'cases', label: 'Cases & Enclosures' },
+        { id: 'mounts', label: 'Mounts & Stands' },
+        { id: 'cables', label: 'Cable Management' },
+        { id: 'cooling', label: 'Cooling Solutions' },
+      ],
+    },
+  ];
+
+  const handleSearch = (query: string) => {
+    console.log('Searching for:', query);
+    // Implement your search logic here
+  };
+
+  const handleCategorySelect = (categoryId: string) => {
+    console.log('Selected category:', categoryId);
+    // Implement your category filtering logic here
+  };
+
+  const handleCartClick = () => {
+    console.log('Cart clicked');
+    // Implement your cart navigation logic here
+  };
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -76,7 +148,7 @@ export function StickyNavigation({
       <nav className={styles['navbar']}>
         <div className={styles['navbar-content']}>
           {/* Logo/Brand */}
-          <div className={styles['brand']}>
+          <div className={styles['brand']} onClick={() => navigate('/marketplace')}>
             <span className={styles['brand-icon']}>🖨️</span>
             <span className={styles['brand-text']}>Marketplace</span>
           </div>
@@ -326,7 +398,9 @@ export function StickyNavigation({
         </Menu>
       )}
       {/* Main Content Area */}
-      <main className={styles['content']}>{children}</main>
+      <main className={styles['content']}>
+        <Outlet />
+      </main>
     </div>
   );
 }

@@ -42,9 +42,6 @@
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../../../shared/components/cards/tsconfig.lib.json"
-    },
-    {
       "path": "../../../shared/utils/translation/tsconfig.lib.json"
     },
     {
