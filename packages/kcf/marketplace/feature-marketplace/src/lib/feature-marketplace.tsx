@@ -1,18 +1,22 @@
 import styles from './feature-marketplace.module.scss';
 import { MarketplaceCard } from '@packages/shared/components/cards';
 import { useNavigate } from 'react-router-dom';
+import { useIntl } from 'react-intl';
 
 export function FeatureMarketplace() {
   const navigate = useNavigate();
+  const intl = useIntl();
 
   function handleCardClick(productId: number) {
     navigate(`/marketplace/${productId}`);
   }
   const itemsTemplate = [
     {
-      name: 'Product 1',
-      image: '🎨',
-      shortDescription: 'Amazing 3D print',
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_1.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_1.IMAGE' }),
+      shortDescription: intl.formatMessage({
+        id: 'MARKETPLACE.ITEMS.PRODUCT_1.SHORT_DESCRIPTION',
+      }),
       price: 19.99,
       rating: 4.5,
       onClick: () => {
@@ -20,39 +24,47 @@ export function FeatureMarketplace() {
       },
     },
     {
-      name: 'Product 2',
-      image: '🔧',
-      shortDescription: 'Functional part',
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_2.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_2.IMAGE' }),
+      shortDescription: intl.formatMessage({
+        id: 'MARKETPLACE.ITEMS.PRODUCT_2.SHORT_DESCRIPTION',
+      }),
       price: 14.99,
-      rating: 4.2,
+      rating: 3.5,
       onClick: () => {
         handleCardClick(2);
       },
     },
     {
-      name: 'Product 3',
-      image: '🎮',
-      shortDescription: 'Gaming accessory',
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_3.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_3.IMAGE' }),
+      shortDescription: intl.formatMessage({
+        id: 'MARKETPLACE.ITEMS.PRODUCT_3.SHORT_DESCRIPTION',
+      }),
       price: 29.99,
-      rating: 3.2,
+      rating: 1,
       onClick: () => {
         handleCardClick(3);
       },
     },
     {
-      name: 'Product 4',
-      image: '💍',
-      shortDescription: 'Stylish jewelry',
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_4.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_4.IMAGE' }),
+      shortDescription: intl.formatMessage({
+        id: 'MARKETPLACE.ITEMS.PRODUCT_4.SHORT_DESCRIPTION',
+      }),
       price: 24.99,
-      rating: 4.3,
+      rating: 2.5,
       onClick: () => {
         handleCardClick(4);
       },
     },
     {
-      name: 'Product 5',
-      image: '🧸',
-      shortDescription: 'Fun toy',
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_5.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_5.IMAGE' }),
+      shortDescription: intl.formatMessage({
+        id: 'MARKETPLACE.ITEMS.PRODUCT_5.SHORT_DESCRIPTION',
+      }),
       price: 9.99,
       rating: 4.0,
       onClick: () => {
@@ -60,131 +72,221 @@ export function FeatureMarketplace() {
       },
     },
     {
-      name: 'Product 6',
-      image: '💻',
-      shortDescription: 'Tech gadget',
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_6.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_6.IMAGE' }),
+      shortDescription: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_6.SHORT_DESCRIPTION' }),
       price: 39.99,
-      rating: 1.2,
-      onClick: () => {
-        handleCardClick(6);
-      },
-    },
-    {
-      name: 'Product 7',
-      image: '🎨',
-      shortDescription: 'Artistic piece',
-      price: 22.99,
-      rating: 3.7,
-      onClick: () => {
-        handleCardClick(1);
-      },
-    },
-    {
-      name: 'Product 8',
-      image: '🔧',
-      shortDescription: 'Useful tool',
-      price: 12.99,
-      rating: 4.1,
-      onClick: () => {
-        handleCardClick(2);
-      },
-    },
-    {
-      name: 'Product 9',
-      image: '🎮',
-      shortDescription: 'Game accessory',
-      price: 27.99,
       rating: 0.5,
       onClick: () => {
-        handleCardClick(3);
-      },
-    },
-    {
-      name: 'Product 10',
-      image: '💍',
-      shortDescription: 'Elegant jewelry',
-      price: 34.99,
-      rating: 4.5,
-      onClick: () => {
-        handleCardClick(4);
-      },
-    },
-    {
-      name: 'Product 11',
-      image: '🧸',
-      shortDescription: 'Educational toy',
-      price: 19.99,
-      rating: 2.8,
-      onClick: () => {
-        handleCardClick(5);
-      },
-    },
-    {
-      name: 'Product 12',
-      image: '💻',
-      shortDescription: 'Electronic accessory',
-      price: 44.99,
-      rating: 4.7,
-      onClick: () => {
         handleCardClick(6);
       },
     },
     {
-      name: 'Product 13',
-      image: '🎨',
-      shortDescription: 'Creative sculpture',
-      price: 26.99,
-      rating: 4.3,
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_1.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_1.IMAGE' }),
+      shortDescription: intl.formatMessage({
+        id: 'MARKETPLACE.ITEMS.PRODUCT_1.SHORT_DESCRIPTION',
+      }),
+      price: 19.99,
+      rating: 4.5,
       onClick: () => {
         handleCardClick(1);
       },
     },
     {
-      name: 'Product 14',
-      image: '🔧',
-      shortDescription: 'Handy tool',
-      price: 15.99,
-      rating: 1,
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_2.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_2.IMAGE' }),
+      shortDescription: intl.formatMessage({
+        id: 'MARKETPLACE.ITEMS.PRODUCT_2.SHORT_DESCRIPTION',
+      }),
+      price: 14.99,
+      rating: 3.5,
       onClick: () => {
         handleCardClick(2);
       },
     },
     {
-      name: 'Product 15',
-      image: '🎮',
-      shortDescription: 'Gaming figure',
-      price: 31.99,
-      rating: 1.78,
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_3.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_3.IMAGE' }),
+      shortDescription: intl.formatMessage({
+        id: 'MARKETPLACE.ITEMS.PRODUCT_3.SHORT_DESCRIPTION',
+      }),
+      price: 29.99,
+      rating: 1,
       onClick: () => {
         handleCardClick(3);
       },
     },
     {
-      name: 'Product 16',
-      image: '💍',
-      shortDescription: 'Chic pendant',
-      price: 28.99,
-      rating: 3.7,
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_4.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_4.IMAGE' }),
+      shortDescription: intl.formatMessage({
+        id: 'MARKETPLACE.ITEMS.PRODUCT_4.SHORT_DESCRIPTION',
+      }),
+      price: 24.99,
+      rating: 2.5,
       onClick: () => {
         handleCardClick(4);
       },
     },
     {
-      name: 'Product 17',
-      image: '🧸',
-      shortDescription: 'Fun puzzle',
-      price: 14.99,
-      rating: 2.4,
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_5.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_5.IMAGE' }),
+      shortDescription: intl.formatMessage({
+        id: 'MARKETPLACE.ITEMS.PRODUCT_5.SHORT_DESCRIPTION',
+      }),
+      price: 9.99,
+      rating: 4.0,
       onClick: () => {
         handleCardClick(5);
       },
     },
     {
-      name: 'Product 18',
-      image: '💻',
-      shortDescription: 'Tech mount',
-      price: 37.99,
-      rating: 2.4,
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_6.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_6.IMAGE' }),
+      shortDescription: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_6.SHORT_DESCRIPTION' }),
+      price: 39.99,
+      rating: 0.5,
+      onClick: () => {
+        handleCardClick(6);
+      },
+    },
+    {
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_1.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_1.IMAGE' }),
+      shortDescription: intl.formatMessage({
+        id: 'MARKETPLACE.ITEMS.PRODUCT_1.SHORT_DESCRIPTION',
+      }),
+      price: 19.99,
+      rating: 4.5,
+      onClick: () => {
+        handleCardClick(1);
+      },
+    },
+    {
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_2.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_2.IMAGE' }),
+      shortDescription: intl.formatMessage({
+        id: 'MARKETPLACE.ITEMS.PRODUCT_2.SHORT_DESCRIPTION',
+      }),
+      price: 14.99,
+      rating: 3.5,
+      onClick: () => {
+        handleCardClick(2);
+      },
+    },
+    {
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_3.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_3.IMAGE' }),
+      shortDescription: intl.formatMessage({
+        id: 'MARKETPLACE.ITEMS.PRODUCT_3.SHORT_DESCRIPTION',
+      }),
+      price: 29.99,
+      rating: 1,
+      onClick: () => {
+        handleCardClick(3);
+      },
+    },
+    {
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_4.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_4.IMAGE' }),
+      shortDescription: intl.formatMessage({
+        id: 'MARKETPLACE.ITEMS.PRODUCT_4.SHORT_DESCRIPTION',
+      }),
+      price: 24.99,
+      rating: 2.5,
+      onClick: () => {
+        handleCardClick(4);
+      },
+    },
+    {
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_5.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_5.IMAGE' }),
+      shortDescription: intl.formatMessage({
+        id: 'MARKETPLACE.ITEMS.PRODUCT_5.SHORT_DESCRIPTION',
+      }),
+      price: 9.99,
+      rating: 4.0,
+      onClick: () => {
+        handleCardClick(5);
+      },
+    },
+    {
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_6.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_6.IMAGE' }),
+      shortDescription: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_6.SHORT_DESCRIPTION' }),
+      price: 39.99,
+      rating: 0.5,
+      onClick: () => {
+        handleCardClick(6);
+      },
+    },
+    {
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_1.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_1.IMAGE' }),
+      shortDescription: intl.formatMessage({
+        id: 'MARKETPLACE.ITEMS.PRODUCT_1.SHORT_DESCRIPTION',
+      }),
+      price: 19.99,
+      rating: 4.5,
+      onClick: () => {
+        handleCardClick(1);
+      },
+    },
+    {
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_2.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_2.IMAGE' }),
+      shortDescription: intl.formatMessage({
+        id: 'MARKETPLACE.ITEMS.PRODUCT_2.SHORT_DESCRIPTION',
+      }),
+      price: 14.99,
+      rating: 3.5,
+      onClick: () => {
+        handleCardClick(2);
+      },
+    },
+    {
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_3.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_3.IMAGE' }),
+      shortDescription: intl.formatMessage({
+        id: 'MARKETPLACE.ITEMS.PRODUCT_3.SHORT_DESCRIPTION',
+      }),
+      price: 29.99,
+      rating: 1,
+      onClick: () => {
+        handleCardClick(3);
+      },
+    },
+    {
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_4.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_4.IMAGE' }),
+      shortDescription: intl.formatMessage({
+        id: 'MARKETPLACE.ITEMS.PRODUCT_4.SHORT_DESCRIPTION',
+      }),
+      price: 24.99,
+      rating: 2.5,
+      onClick: () => {
+        handleCardClick(4);
+      },
+    },
+    {
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_5.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_5.IMAGE' }),
+      shortDescription: intl.formatMessage({
+        id: 'MARKETPLACE.ITEMS.PRODUCT_5.SHORT_DESCRIPTION',
+      }),
+      price: 9.99,
+      rating: 4.0,
+      onClick: () => {
+        handleCardClick(5);
+      },
+    },
+    {
+      name: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_6.NAME' }),
+      image: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_6.IMAGE' }),
+      shortDescription: intl.formatMessage({ id: 'MARKETPLACE.ITEMS.PRODUCT_6.SHORT_DESCRIPTION' }),
+      price: 39.99,
+      rating: 0.5,
       onClick: () => {
         handleCardClick(6);
       },
