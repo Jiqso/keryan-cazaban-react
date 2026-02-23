@@ -15,11 +15,32 @@ export const LanguageContext = createContext<LanguageContextProps>({
   handleLanguageChange: () => {},
 });
 
+const LANGUAGE_STORAGE_KEY = 'preferred-language';
+
+// Helper to get initial language from localStorage
+const getInitialLanguage = (): 'fr' | 'en' => {
+  try {
+    const stored = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+    if (stored === 'en' || stored === 'fr') {
+      return stored;
+    }
+  } catch (error) {
+    // localStorage might not be available in some environments
+    console.warn('Could not access localStorage:', error);
+  }
+  return 'fr'; // Default fallback
+};
+
 export const LanguageProvider: React.FC<PropsWithChildren> = ({ children }) => {
-  const [language, setLanguage] = useState<'fr' | 'en'>('fr');
+  const [language, setLanguage] = useState<'fr' | 'en'>(getInitialLanguage);
 
   const handleLanguageChange = (newLanguage: 'fr' | 'en') => {
     setLanguage(newLanguage);
+    try {
+      localStorage.setItem(LANGUAGE_STORAGE_KEY, newLanguage);
+    } catch (error) {
+      console.warn('Could not save language preference:', error);
+    }
   };
 
   const messages = IntlMessages(language);
