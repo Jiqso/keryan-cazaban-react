@@ -20,7 +20,7 @@ export default defineConfig(() => ({
   // Configuration for building your library.
   // See: https://vite.dev/guide/build.html#library-mode
   build: {
-    outDir: './dist',
+    outDir: '../../../../dist/packages/kcf/marketplace/feature-product',
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
