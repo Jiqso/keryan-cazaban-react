@@ -72,12 +72,109 @@
       }
     }
   },
+  "MARKETPLACE": {
+    "FEATURE_PRODUCT": {
+      "BACK_TO_MARKETPLACE": "← Retour à la page d'accueil"
+    },
+    "ITEMS": {
+      "CATEGORY": {
+        "DECORATION": "Décoration",
+        "FUNCTIONAL_PART": "Pièce Fonctionnelle",
+        "GAMING": "Jeux",
+        "TECHNOLOGY": "Technologie",
+        "JEWELRY": "Bijoux",
+        "TOYS": "Jouets"
+      },
+      "MATERIAL": {
+        "ABS": "ABS",
+        "PETG": "PETG",
+        "PLA": "PLA",
+        "PLA_PLUS": "PLA+",
+        "NYLON": "Nylon",
+        "RESIN": "Résine",
+        "TPU": "TPU"
+      },
+      "FEATURES": {
+        "EASY_TO_CLEAN": "Facile à nettoyer",
+        "ELEGANT_STYLE": "Style élégant",
+        "ERGONOMIC_DESIGN": "Design ergonomique",
+        "CLEAN_MINIMAL_DESIGN": "Design minimal et épuré",
+        "COLLECTIBLE_FORMAT": "Format collectionnable",
+        "COMPACT_FORMAT": "Format compact",
+        "COMPATIBLE_WITH_MOST_CONTROLLERS": "Compatible avec la plupart des manettes",
+        "CUSTOM_LOOK": "Look personnalisé",
+        "GREAT_GIFT_IDEA": "Idée cadeau géniale",
+        "HIGH_QUALITY_FINISH": "Finition de haute qualité",
+        "LIGHTWEIGHT_DESIGN": "Design léger",
+        "PLAYFUL_DESIGN": "Design ludique",
+        "SAFE_ROUNDED_EDGES": "Bords arrondis et sûrs",
+        "SMART_CABLE_ROUTING": "Gestion intelligente des câbles",
+        "RELIABLE_FIT": "Ajustement fiable",
+        "STRONG_LAYERS_ADHESION": "Adhésion solide des couches",
+        "SUITABLE_FOR_PROTOTYPING": "Convient pour le prototypage",
+        "VERY_LIGHTWEIGHT": "Très léger"
+      },
+      "PAGE": {
+        "CUSTOMER_REVIEWS": "Avis des clients",
+        "DIMENSIONS": "Dimensions",
+        "HIGHLIGHTS": "Points forts",
+        "MATERIAL": "Matériau",
+        "ORDER": "Commander ce produit",
+        "SPECIFICATIONS": "Spécifications",
+        "PRODUCTION_TIME": "Temps de production"
+      },
+      "PRODUCT_1": {
+        "NAME": "Produit 1",
+        "IMAGE": "🎨",
+        "SHORT_DESCRIPTION": "Impression 3D incroyable",
+        "LONG_DESCRIPTION": "Une impression 3D décorative de qualité supérieure conçue pour apporter un style moderne à votre bureau, étagère ou espace de travail créatif."
+      },
+      "PRODUCT_2": {
+        "NAME": "Produit 2",
+        "IMAGE": "🔧",
+        "SHORT_DESCRIPTION": "Pièce fonctionnelle",
+        "LONG_DESCRIPTION": "Une pièce imprimée en 3D durable et pratique, conçue pour une utilisation quotidienne et un remplacement rapide dans les projets DIY."
+      },
+      "PRODUCT_3": {
+        "NAME": "Produit 3",
+        "IMAGE": "🎮",
+        "SHORT_DESCRIPTION": "Accessoire de jeu",
+        "LONG_DESCRIPTION": "Un accessoire de jeu personnalisé conçu pour améliorer le confort et le style pendant que vous jouez à vos jeux préférés."
+      },
+      "PRODUCT_4": {
+        "NAME": "Produit 4",
+        "IMAGE": "💍",
+        "SHORT_DESCRIPTION": "Bijou élégant",
+        "LONG_DESCRIPTION": "Un bijou léger et élégant idéal pour les cadeaux, les événements ou les accessoires de mode quotidiens."
+      },
+      "PRODUCT_5": {
+        "NAME": "Produit 5",
+        "IMAGE": "🧸",
+        "SHORT_DESCRIPTION": "Jouet amusant",
+        "LONG_DESCRIPTION": "Un concept de jouet ludique et sûr pour la collection, la décoration ou les activités éducatives sous supervision."
+      },
+      "PRODUCT_6": {
+        "NAME": "Produit 6",
+        "IMAGE": "💻",
+        "SHORT_DESCRIPTION": "Gadget technologique",
+        "LONG_DESCRIPTION": "Un gadget pratique et moderne pour organiser votre bureau et soutenir vos outils quotidiens."
+      }
+    },
+    "NOT_FOUND": {
+      "PAGE": "Page non trouvée",
+      "DESCRIPTION": "Désolé, la page que vous recherchez n'existe pas.",
+      "BACK_TO_HOME": "← Retour à l'accueil"
+    }
+  },
   "SHARED": {
     "FORM": {
       "GET_LOGGED": "Se connecter",
       "GET_REGISTERED": "S'enregistrer",
       "LOGIN": "Connexion",
       "REGISTER": "Créer un compte"
+    },
+    "WORDS": {
+      "DAYS": "jours"
     }
   }
 }

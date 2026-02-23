@@ -72,12 +72,106 @@
       }
     }
   },
+  "MARKETPLACE": {
+    "FEATURE_PRODUCT": {
+      "BACK_TO_MARKETPLACE": "← Back to marketplace"
+    },
+    "ITEMS": {
+      "CATEGORY": {
+        "DECORATION": "Decoration",
+        "FUNCTIONAL_PART": "Functional Part",
+        "GAMING": "Gaming",
+        "TECHNOLOGY": "Technology",
+        "JEWELRY": "Jewelry",
+        "TOYS": "Toys"
+      },
+      "MATERIAL": {
+        "ABS": "ABS",
+        "NYLON": "Nylon",
+        "PETG": "PETG",
+        "PLA": "PLA",
+        "PLA_PLUS": "PLA+",
+        "RESIN": "Resin",
+        "TPU": "TPU"
+      },
+      "FEATURES": {
+        "EASY_TO_CLEAN": "Easy to clean",
+        "ELEGANT_STYLE": "Elegant style",
+        "ERGONOMIC_DESIGN": "Ergonomic design",
+        "CLEAN_MINIMAL_DESIGN": "Clean minimal design",
+        "COLLECTIBLE_FORMAT": "Collectible format",
+        "COMPACT_FORMAT": "Compact format",
+        "COMPATIBLE_WITH_MOST_CONTROLLERS": "Compatible with most controllers",
+        "CUSTOM_LOOK": "Custom look",
+        "GREAT_GIFT_IDEA": "Great gift idea",
+        "HIGH_QUALITY_FINISH": "High quality finish",
+        "LIGHTWEIGHT_DESIGN": "Lightweight design",
+        "PLAYFUL_DESIGN": "Playful design",
+        "SAFE_ROUNDED_EDGES": "Safe rounded edges",
+        "SMART_CABLE_ROUTING": "Smart cable routing",
+        "RELIABLE_FIT": "Reliable fit",
+        "STRONG_LAYERS_ADHESION": "Strong layers adhesion",
+        "SUITABLE_FOR_PROTOTYPING": "Suitable for prototyping",
+        "VERY_LIGHTWEIGHT": "Very lightweight"
+      },
+      "PAGE": {
+        "CUSTOMER_REVIEWS": "Customer Reviews",
+        "DIMENSIONS": "Dimensions",
+        "HIGHLIGHTS": "Highlights",
+        "MATERIAL": "Material",
+        "ORDER": "Order this product",
+        "SPECIFICATIONS": "Specifications",
+        "PRODUCTION_TIME": "Production Time"
+      },
+      "PRODUCT_1": {
+        "NAME": "Product 1",
+        "IMAGE": "🎨",
+        "SHORT_DESCRIPTION": "Amazing 3D print",
+        "LONG_DESCRIPTION": "A premium decorative 3D print designed to bring modern style to your desk, shelf, or creative workspace.",
+        "RATING": ".5"
+      },
+      "PRODUCT_2": {
+        "NAME": "Product 2",
+        "IMAGE": "🔧",
+        "SHORT_DESCRIPTION": "Functional part",
+        "LONG_DESCRIPTION": "A durable and practical 3D printed part made for daily use and fast replacement in DIY projects.",
+        "RATING": ".5"
+      },
+      "PRODUCT_3": {
+        "NAME": "Product 3",
+        "IMAGE": "🎮",
+        "SHORT_DESCRIPTION": "Gaming accessory",
+        "LONG_DESCRIPTION": "A custom gaming accessory designed to enhance comfort and style while playing your favorite games."
+      },
+      "PRODUCT_4": {
+        "NAME": "Product 4",
+        "IMAGE": "💍",
+        "SHORT_DESCRIPTION": "Elegant jewelry",
+        "LONG_DESCRIPTION": "A lightweight and elegant piece of jewelry, perfect for gifts, events, or everyday fashion accessories."
+      },
+      "PRODUCT_5": {
+        "NAME": "Product 5",
+        "IMAGE": "🧸",
+        "SHORT_DESCRIPTION": "Fun toy",
+        "LONG_DESCRIPTION": "A playful and safe toy concept for collection, decoration, or educational activities under supervision."
+      },
+      "PRODUCT_6": {
+        "NAME": "Product 6",
+        "IMAGE": "💻",
+        "SHORT_DESCRIPTION": "Tech gadget",
+        "LONG_DESCRIPTION": "A practical and modern gadget to organize your desk and support your daily tools."
+      }
+    }
+  },
   "SHARED": {
     "FORM": {
       "GET_LOGGED": "Log in",
       "GET_REGISTERED": "Register",
       "LOGIN": "Login",
       "REGISTER": "Create an account"
+    },
+    "WORDS": {
+      "DAYS": "days"
     }
   }
 }
