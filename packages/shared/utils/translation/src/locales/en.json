@@ -161,6 +161,11 @@
         "SHORT_DESCRIPTION": "Tech gadget",
         "LONG_DESCRIPTION": "A practical and modern gadget to organize your desk and support your daily tools."
       }
+    },
+    "NOT_FOUND": {
+      "PAGE": "Page not found",
+      "DESCRIPTION": "Sorry, the page you are looking for does not exist.",
+      "BACK_TO_HOME": "← Back to home"
     }
   },
   "SHARED": {
