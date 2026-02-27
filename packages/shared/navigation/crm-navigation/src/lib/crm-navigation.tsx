@@ -27,24 +27,24 @@ export function CrmNavigation() {
       label: useIntl().formatMessage({ id: 'CRM.DASHBOARD.NAVIGATION.DASHBOARD' }),
       icon: <DashboardRoundedIcon fontSize="small" />,
     },
-    {
-      to: '/crm#clients',
-      section: 'clients',
-      label: useIntl().formatMessage({ id: 'CRM.DASHBOARD.NAVIGATION.CLIENTS' }),
-      icon: <GroupRoundedIcon fontSize="small" />,
-    },
-    {
-      to: '/crm#sales',
-      section: 'sales',
-      label: useIntl().formatMessage({ id: 'CRM.DASHBOARD.NAVIGATION.SALES' }),
-      icon: <InsightsRoundedIcon fontSize="small" />,
-    },
-    {
-      to: '/crm#settings',
-      section: 'settings',
-      label: useIntl().formatMessage({ id: 'CRM.DASHBOARD.NAVIGATION.SETTINGS' }),
-      icon: <SettingsRoundedIcon fontSize="small" />,
-    },
+    // {
+    //   to: '/crm#clients',
+    //   section: 'clients',
+    //   label: useIntl().formatMessage({ id: 'CRM.DASHBOARD.NAVIGATION.CLIENTS' }),
+    //   icon: <GroupRoundedIcon fontSize="small" />,
+    // },
+    // {
+    //   to: '/crm#sales',
+    //   section: 'sales',
+    //   label: useIntl().formatMessage({ id: 'CRM.DASHBOARD.NAVIGATION.SALES' }),
+    //   icon: <InsightsRoundedIcon fontSize="small" />,
+    // },
+    // {
+    //   to: '/crm#settings',
+    //   section: 'settings',
+    //   label: useIntl().formatMessage({ id: 'CRM.DASHBOARD.NAVIGATION.SETTINGS' }),
+    //   icon: <SettingsRoundedIcon fontSize="small" />,
+    // },
   ];
 
   const getCurrentCrmLocationLabel = () => {
