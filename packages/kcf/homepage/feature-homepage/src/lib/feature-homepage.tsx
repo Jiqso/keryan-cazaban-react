@@ -92,7 +92,15 @@ export function FeatureHomepage() {
       tags: ['Marketplace', 'CRM'],
     },
     {
-      companyName: 'Marketplace preview',
+      companyName: intl.formatMessage({ id: 'HOMEPAGE.HOME.PORTFOLIO.MARKETPLACE' }),
+      projectTitle: '',
+      description: '',
+      previewImage: '/websiteScreenshot/crm.png',
+      websiteUrl: `/crm`,
+      tags: ['CRM', 'Template'],
+    },
+    {
+      companyName: intl.formatMessage({ id: 'HOMEPAGE.HOME.PORTFOLIO.CRM' }),
       projectTitle: '',
       description: '',
       previewImage: '/websiteScreenshot/marketplace.png',
@@ -162,8 +170,8 @@ export function FeatureHomepage() {
               })}
             </h3>
             <ul>
-              <li>React, PHP, Angular</li>
-              <li>HTML5, CSS3, JavaScript</li>
+              <li>React, React Native, Angular</li>
+              <li>HTML, CSS3, JavaScript</li>
               <li>Material UI</li>
               <li>
                 {intl.formatMessage({
@@ -184,7 +192,7 @@ export function FeatureHomepage() {
               })}
             </h3>
             <ul>
-              <li>Node.js</li>
+              <li>Node.js, PHP</li>
               <li>Express, Nest.js</li>
               <li>MySQL</li>
               <li>REST APIs</li>
@@ -211,7 +219,6 @@ export function FeatureHomepage() {
               <li>Typescript</li>
               <li>Github</li>
               <li>Nx Monorepo</li>
-              <li>Vite, Express</li>
               <li>CI/CD Pipelines, Testing (Vitest, Jest)</li>
               <li>Prettier, ESLint, i18n, Theming</li>
             </ul>
