@@ -27,6 +27,57 @@
         "CLIENTS": "Clients",
         "SALES": "Sales",
         "SETTINGS": "Settings"
+      },
+      "FEATURE": {
+        "SUBTITLE": "Overview of sales performance and team activity",
+        "KPIS": {
+          "PIPELINE_VALUE": {
+            "LABEL": "Pipeline Value"
+          },
+          "NEW_LEADS": {
+            "LABEL": "New Leads"
+          },
+          "CONVERSION_RATE": {
+            "LABEL": "Conversion Rate"
+          },
+          "WON_DEALS": {
+            "LABEL": "Won Deals"
+          },
+          "THIS_MONTH": "this month"
+        },
+        "REVENUE": {
+          "TITLE": "Revenue Trend",
+          "PERIOD": "Last 7 days"
+        },
+        "FUNNEL": {
+          "TITLE": "Deal Funnel",
+          "PERIOD": "Q1 snapshot",
+          "QUALIFIED": "Qualified",
+          "PROPOSAL": "Proposal",
+          "NEGOTIATION": "Negotiation",
+          "WON": "Won"
+        },
+        "ACTIVITY": {
+          "TITLE": "Recent Activity",
+          "PERIOD": "Live updates",
+          "AURORA_AGENCY": {
+            "STATUS": "Proposal sent"
+          },
+          "NORTHWIND_LABS": {
+            "STATUS": "Call scheduled"
+          },
+          "BLUE_HARBOR": {
+            "STATUS": "Negotiation"
+          },
+          "VERTEX_STUDIO": {
+            "STATUS": "Contract signed"
+          }
+        },
+        "GOAL": {
+          "TITLE": "Goal Progress",
+          "PERIOD": "Monthly target",
+          "DESCRIPTION": "$74,000 reached of $100,000 objective"
+        }
       }
     }
   },

@@ -27,6 +27,57 @@
         "CLIENTS": "Clients",
         "SALES": "Ventes",
         "SETTINGS": "Paramètres"
+      },
+      "FEATURE": {
+        "SUBTITLE": "Vue d'ensemble des performances commerciales et de l'activité de l'équipe",
+        "KPIS": {
+          "PIPELINE_VALUE": {
+            "LABEL": "Valeur du pipeline"
+          },
+          "NEW_LEADS": {
+            "LABEL": "Nouveaux prospects"
+          },
+          "CONVERSION_RATE": {
+            "LABEL": "Taux de conversion"
+          },
+          "WON_DEALS": {
+            "LABEL": "Affaires gagnées"
+          },
+          "THIS_MONTH": "ce mois-ci"
+        },
+        "REVENUE": {
+          "TITLE": "Tendance du chiffre d'affaires",
+          "PERIOD": "7 derniers jours"
+        },
+        "FUNNEL": {
+          "TITLE": "Tunnel de conversion",
+          "PERIOD": "Aperçu T1",
+          "QUALIFIED": "Qualifiés",
+          "PROPOSAL": "Proposition",
+          "NEGOTIATION": "Négociation",
+          "WON": "Gagnés"
+        },
+        "ACTIVITY": {
+          "TITLE": "Activité récente",
+          "PERIOD": "Mises à jour en direct",
+          "AURORA_AGENCY": {
+            "STATUS": "Proposition envoyée"
+          },
+          "NORTHWIND_LABS": {
+            "STATUS": "Appel planifié"
+          },
+          "BLUE_HARBOR": {
+            "STATUS": "Négociation"
+          },
+          "VERTEX_STUDIO": {
+            "STATUS": "Contrat signé"
+          }
+        },
+        "GOAL": {
+          "TITLE": "Progression de l'objectif",
+          "PERIOD": "Objectif mensuel",
+          "DESCRIPTION": "74 000 € atteints sur un objectif de 100 000 €"
+        }
       }
     }
   },
