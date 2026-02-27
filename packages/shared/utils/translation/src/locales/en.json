@@ -18,9 +18,17 @@
       }
     }
   },
-  "INPUTS": {
-    "PSEUDO_EMAIL": "Pseudo/email",
-    "PASSWORD": "Password"
+  "CRM": {
+    "DASHBOARD": {
+      "WELCOME": "Welcome to your CRM dashboard",
+      "DESCRIPTION": "Manage your clients, track your sales, and grow your business with our intuitive and powerful CRM interface.",
+      "NAVIGATION": {
+        "DASHBOARD": "Dashboard",
+        "CLIENTS": "Clients",
+        "SALES": "Sales",
+        "SETTINGS": "Settings"
+      }
+    }
   },
   "HOMEPAGE": {
     "HOME": {
@@ -46,6 +54,8 @@
         "CONTACT": "Contact"
       },
       "PORTFOLIO": {
+        "CRM": "CRM Template",
+        "MARKETPLACE": "Marketplace Template",
         "PLACEHOLDER": "Portfolio examples coming soon. This section will showcase real-world applications and projects demonstrating my capabilities in web development."
       },
       "SKILLS": {
@@ -71,6 +81,10 @@
         "TOOLS_TITLE": "Tools & Platforms"
       }
     }
+  },
+  "INPUTS": {
+    "PSEUDO_EMAIL": "Pseudo/email",
+    "PASSWORD": "Password"
   },
   "MARKETPLACE": {
     "FEATURE_PRODUCT": {

@@ -18,9 +18,17 @@
       }
     }
   },
-  "INPUTS": {
-    "PSEUDO_EMAIL": "Pseudo/email",
-    "PASSWORD": "Mot de passe"
+  "CRM": {
+    "DASHBOARD": {
+      "WELCOME": "Bienvenue sur votre tableau de bord CRM",
+      "DESCRIPTION": "Gérez vos clients, suivez vos ventes et développez votre entreprise avec notre interface CRM intuitive et puissante.",
+      "NAVIGATION": {
+        "DASHBOARD": "Tableau de bord",
+        "CLIENTS": "Clients",
+        "SALES": "Ventes",
+        "SETTINGS": "Paramètres"
+      }
+    }
   },
   "HOMEPAGE": {
     "HOME": {
@@ -46,6 +54,8 @@
         "CONTACT": "Contact"
       },
       "PORTFOLIO": {
+        "CRM": "Exemple CRM",
+        "MARKETPLACE": "Exemple E-commerce",
         "PLACEHOLDER": "Exemples de portfolio à venir bientôt. Cette section présentera des applications et des projets réels démontrant mes compétences en développement web."
       },
       "SKILLS": {
@@ -71,6 +81,10 @@
         "TOOLS_TITLE": "Outils & Plateformes"
       }
     }
+  },
+  "INPUTS": {
+    "PSEUDO_EMAIL": "Pseudo/email",
+    "PASSWORD": "Mot de passe"
   },
   "MARKETPLACE": {
     "FEATURE_PRODUCT": {
