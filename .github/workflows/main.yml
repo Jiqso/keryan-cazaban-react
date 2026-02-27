@@ -66,12 +66,15 @@ jobs:
           path: node_modules
           key: node-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
 
+      - name: Set Nx SHAs
+        uses: nrwl/nx-set-shas@v4
+
       # Nx lint
       - name: Running linter on all projects
         run: npx nx run-many --target=lint --all --exclude=kcf-e2e,kcb-e2e
       # Nx format
       - name: Checking format on all projects
-        run: npx nx format:check --all --exclude=kcf-e2e,kcb-e2e
+        run: npx nx format:check --base=$NX_BASE --head=$NX_HEAD --exclude=kcf-e2e,kcb-e2e
       # Nx test
       - name: Running jest test-runner on all projects
         run: npx nx run-many --target=test --all --exclude=kcf-e2e,kcb-e2e
