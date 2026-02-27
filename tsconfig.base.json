@@ -31,6 +31,8 @@
       "@packages/kcf/marketplace/feature-product": [
         "packages/kcf/marketplace/feature-product/src/index.ts"
       ],
+      "@packages/kcf/crm/feature-dashboard": ["packages/kcf/crm/feature-dashboard/src/index.ts"],
+
       // Back-end packages
       "@packages/kcb/homepage": ["packages/kcb/homepage/src/index.ts"],
       "@packages/kcb/marketplace": ["packages/kcb/marketplace/src/index.ts"],
@@ -43,6 +45,9 @@
       ],
       "@packages/shared/navigation/sticky-navigation": [
         "packages/shared/navigation/sticky-navigation/src/index.ts"
+      ],
+      "@packages/shared/navigation/crm-navigation": [
+        "packages/shared/navigation/crm-navigation/src/index.ts"
       ],
       "@packages/shared/utils/intl-helper": ["packages/shared/utils/intl-helper/src/index.ts"],
       "@packages/shared/utils/language-provider": [

@@ -18,7 +18,8 @@
     "packages/shared/utils/*",
     "packages/shared/components/*",
     "packages/shared/navigation/*",
-    "packages/kcf/marketplace/*"
+    "packages/kcf/marketplace/*",
+    "packages/kcf/crm/*"
   ],
   "devDependencies": {
     "@babel/core": "^7.14.5",

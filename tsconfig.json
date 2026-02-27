@@ -55,6 +55,12 @@
     },
     {
       "path": "./packages/kcf/marketplace/feature-product"
+    },
+    {
+      "path": "./packages/kcf/crm/feature-dashboard"
+    },
+    {
+      "path": "./packages/shared/navigation/crm-navigation"
     }
   ]
 }
