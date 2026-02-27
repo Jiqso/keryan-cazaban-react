@@ -42,9 +42,6 @@
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../../../kcf/crm/navigation/tsconfig.lib.json"
-    },
-    {
       "path": "../../components/inputs/tsconfig.lib.json"
     }
   ]

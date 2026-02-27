@@ -95,17 +95,17 @@ export function FeatureHomepage() {
       companyName: intl.formatMessage({ id: 'HOMEPAGE.HOME.PORTFOLIO.MARKETPLACE' }),
       projectTitle: '',
       description: '',
-      previewImage: '/websiteScreenshot/crm.png',
-      websiteUrl: `/crm`,
-      tags: ['CRM', 'Template'],
+      previewImage: '/websiteScreenshot/marketplace.png',
+      websiteUrl: `/marketplace`,
+      tags: ['Marketplace', 'Template'],
     },
     {
       companyName: intl.formatMessage({ id: 'HOMEPAGE.HOME.PORTFOLIO.CRM' }),
       projectTitle: '',
       description: '',
-      previewImage: '/websiteScreenshot/marketplace.png',
-      websiteUrl: `/marketplace`,
-      tags: ['Marketplace', 'Template'],
+      previewImage: '/websiteScreenshot/crm.png',
+      websiteUrl: `/crm`,
+      tags: ['CRM', 'Template'],
     },
   ];
 
