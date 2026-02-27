@@ -1,0 +1,23 @@
+{
+  "name": "feature-dashboard",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "../../../../../dist/packages/kcf/crm/feature-dashboard/index.js",
+  "module": "../../../../../dist/packages/kcf/crm/feature-dashboard/index.js",
+  "types": "../../../../../dist/packages/kcf/crm/feature-dashboard/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "keryan-cazaban": "./src/index.ts",
+      "types": "../../../../../dist/packages/kcf/crm/feature-dashboard/index.d.ts",
+      "import": "../../../../../dist/packages/kcf/crm/feature-dashboard/index.js",
+      "default": "../../../../../dist/packages/kcf/crm/feature-dashboard/index.js"
+    }
+  },
+  "nx": {
+    "tags": [
+      "scope:kcf",
+      "type:feature"
+    ]
+  }
+}
