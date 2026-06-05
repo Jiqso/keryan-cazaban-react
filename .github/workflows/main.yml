@@ -71,7 +71,7 @@ jobs:
 
       # Nx lint
       - name: Running linter on all projects
-        run: npx nx run-many --target=lint --all --exclude=kcf-e2e,kcb-e2e --ignore-scripts
+        run: npx nx run-many --target=lint --all --exclude=kcf-e2e,kcb-e2e
       # Nx format
       - name: Auto-format changed files
         run: npx nx format:write --base=$NX_BASE --head=$NX_HEAD --exclude=kcf-e2e,kcb-e2e
@@ -79,7 +79,7 @@ jobs:
         run: npx nx format:check --base=$NX_BASE --head=$NX_HEAD --exclude=kcf-e2e,kcb-e2e
       # Nx test
       - name: Running jest test-runner on all projects
-        run: npx nx run-many --target=test --all --exclude=kcf-e2e,kcb-e2e --ignore-scripts
+        run: npx nx run-many --target=test --all --exclude=kcf-e2e,kcb-e2e
 
   # # E2E job
   # e2e:
