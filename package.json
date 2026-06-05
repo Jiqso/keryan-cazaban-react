@@ -4,6 +4,11 @@
   "engines": {
     "node": ">=20.0.0"
   },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
   "private": true,
   "scripts": {
     "start": "node dist/apps/kcb/main",
