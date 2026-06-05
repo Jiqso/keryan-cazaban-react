@@ -1,6 +1,14 @@
 {
   "name": "keryan-cazaban",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
   "private": true,
   "scripts": {
     "start": "node dist/apps/kcb/main",
