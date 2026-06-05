@@ -127,7 +127,7 @@ jobs:
 
       # Nx build
       - name: Running build
-        run: npx nx run-many --target=build --all --ignore-scripts
+        run: npx nx run-many --target=build --all
 
       # Uploading build dist artifact
       - name: Archiving build artifacts
