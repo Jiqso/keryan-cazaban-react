@@ -1,4 +1,4 @@
-# This is a basic workflow to help you get started with Actions
+# This is a basic workflow to help you get started with Actionsi
 name: main-workflow
 run-name: ${{ github.actor }} is pushing into the main branch 🚀
 
@@ -16,13 +16,13 @@ on:
 env:
   GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
 
-permissions: write-all
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+  # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # Defining different jobs: quality / build / deploy ...
   # Quality job
   dependencies:
+    permissions:
+      contents: write
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -44,7 +44,7 @@ jobs:
           key: node-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
 
       - name: Install Dependencies
-        run: npm ci --cache .npm --prefer-offline
+        run: npm ci --ignore-scripts --cache .npm --prefer-offline
 
   # # Quality job
   quality:
@@ -71,7 +71,7 @@ jobs:
 
       # Nx lint
       - name: Running linter on all projects
-        run: npx nx run-many --target=lint --all --exclude=kcf-e2e,kcb-e2e
+        run: npx nx run-many --target=lint --all --exclude=kcf-e2e,kcb-e2e --ignore-scripts
       # Nx format
       - name: Auto-format changed files
         run: npx nx format:write --base=$NX_BASE --head=$NX_HEAD --exclude=kcf-e2e,kcb-e2e
@@ -79,7 +79,7 @@ jobs:
         run: npx nx format:check --base=$NX_BASE --head=$NX_HEAD --exclude=kcf-e2e,kcb-e2e
       # Nx test
       - name: Running jest test-runner on all projects
-        run: npx nx run-many --target=test --all --exclude=kcf-e2e,kcb-e2e
+        run: npx nx run-many --target=test --all --exclude=kcf-e2e,kcb-e2e --ignore-scripts
 
   # # E2E job
   # e2e:
@@ -127,7 +127,7 @@ jobs:
 
       # Nx build
       - name: Running build
-        run: npx nx run-many --target=build --all
+        run: npx nx run-many --target=build --all --ignore-scripts
 
       # Uploading build dist artifact
       - name: Archiving build artifacts
@@ -159,4 +159,4 @@ jobs:
 
       # Trigger semantic release
       - name: Running Semantic-Release
-        run: npx semantic-release@25.0.2
+        run: npx semantic-release@25.0.2 --ignore-scripts
