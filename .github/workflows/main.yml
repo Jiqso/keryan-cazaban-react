@@ -160,4 +160,4 @@ jobs:
 
       # Trigger semantic release
       - name: Running Semantic-Release
-        run: npx semantic-release@25.0.2 --ignore-scripts
+        run: npx semantic-release@25.0.2
