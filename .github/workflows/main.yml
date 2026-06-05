@@ -15,6 +15,7 @@ on:
 
 env:
   GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
+  NX_CMD: ./node_modules/.bin/nx
 
   # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -71,15 +72,15 @@ jobs:
 
       # Nx lint
       - name: Running linter on all projects
-        run: npx nx run-many --target=lint --all --exclude=kcf-e2e,kcb-e2e
+        run: $NX_CMD run-many --target=lint --all --exclude=kcf-e2e,kcb-e2e
       # Nx format
       - name: Auto-format changed files
-        run: npx nx format:write --base=$NX_BASE --head=$NX_HEAD --exclude=kcf-e2e,kcb-e2e
+        run: $NX_CMD format:write --base=$NX_BASE --head=$NX_HEAD --exclude=kcf-e2e,kcb-e2e
       - name: Checking format on changed files
-        run: npx nx format:check --base=$NX_BASE --head=$NX_HEAD --exclude=kcf-e2e,kcb-e2e
+        run: $NX_CMD format:check --base=$NX_BASE --head=$NX_HEAD --exclude=kcf-e2e,kcb-e2e
       # Nx test
       - name: Running jest test-runner on all projects
-        run: npx nx run-many --target=test --all --exclude=kcf-e2e,kcb-e2e
+        run: $NX_CMD run-many --target=test --all --exclude=kcf-e2e,kcb-e2e
 
   # # E2E job
   # e2e:
@@ -127,7 +128,7 @@ jobs:
 
       # Nx build
       - name: Running build
-        run: npx nx run-many --target=build --all
+        run: $NX_CMD run-many --target=build --all
 
       # Uploading build dist artifact
       - name: Archiving build artifacts
