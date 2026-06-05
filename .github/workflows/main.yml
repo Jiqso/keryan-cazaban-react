@@ -16,7 +16,6 @@ on:
 env:
   GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
   NX_CMD: ./node_modules/.bin/nx
-  NPX_CMD: ./node_modules/.bin/semantic-release
 
   # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -161,4 +160,4 @@ jobs:
 
       # Trigger semantic release
       - name: Running Semantic-Release
-        run: $NPX_CMD semantic-release@25.0.2
+        run: npx semantic-release@25.0.2
